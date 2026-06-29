@@ -341,25 +341,13 @@ h2.script { font-size: clamp(1.7rem, 3.5vw, 2.6rem); color: var(--teal); }
 /* -- PRODUCT GRID (home — 4 tall portrait cards) ---------- */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-}
-/* Row 1: 3 cards, each span 2 of 6 cols */
-.product-grid .product-card:nth-child(1),
-.product-grid .product-card:nth-child(2),
-.product-grid .product-card:nth-child(3) {
-  grid-column: span 2;
-}
-/* Row 2: 2 cards centered — each span 2, with 1-col offset to center the pair */
-.product-grid .product-card:nth-child(4) {
-  grid-column: 2 / span 2;
-}
-.product-grid .product-card:nth-child(5) {
-  grid-column: 4 / span 2;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 3px;
 }
 .product-card {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 2/3;
+  aspect-ratio: 3/4;   /* shorter than 2/3 — fits comfortably in a 5-col single row */
   isolation: isolate;
 }
 .product-card img {
@@ -385,29 +373,11 @@ h2.script { font-size: clamp(1.7rem, 3.5vw, 2.6rem); color: var(--teal); }
   font-weight: 700; color: #fff; line-height: 1.1; margin-bottom: 12px;
 }
 .product-card .btn { align-self: flex-start; font-size: 0.75rem; padding: 9px 18px; }
-@media (max-width: 900px) {
-  .product-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-  /* tablet: 2+2+1 — reset nth-child positions */
-  .product-grid .product-card:nth-child(1),
-  .product-grid .product-card:nth-child(2),
-  .product-grid .product-card:nth-child(3) { grid-column: span 2; }
-  .product-grid .product-card:nth-child(4) { grid-column: span 2; }
-  .product-grid .product-card:nth-child(5) { grid-column: 2 / span 2; }
+@media (max-width: 860px) {
+  .product-grid { grid-template-columns: repeat(3, 1fr); }
 }
-@media (max-width: 600px) {
-  .product-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-  /* mobile: simple 2-col, all cards equal */
-  .product-grid .product-card:nth-child(1),
-  .product-grid .product-card:nth-child(2),
-  .product-grid .product-card:nth-child(3),
-  .product-grid .product-card:nth-child(4),
-  .product-grid .product-card:nth-child(5) {
-    grid-column: span 1;
-  }
+@media (max-width: 560px) {
+  .product-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 420px) {
   .product-card { aspect-ratio: 4/3; }
@@ -985,11 +955,13 @@ h2.script { font-size: clamp(1.7rem, 3.5vw, 2.6rem); color: var(--teal); }
   padding-bottom: clamp(40px, 6vw, 80px);
 }
 
-/* Product grid: no gap between cards (edge-to-edge) */
-.product-grid { gap: 2px; }
+/* Product grid gap set inline on .product-grid rule */
 
 /* Product card btn: slightly smaller on 5-col */
-.product-grid .btn { font-size: 0.7rem; padding: 8px 14px; }
+.product-grid .btn { font-size: 0.72rem; padding: 9px 16px; }
+
+/* Whitespace after product grid before next section */
+.product-grid-section { margin-bottom: clamp(48px, 6vw, 80px); }
 
 /* Delivery step num labels: color fix for band context */
 .band .delivery-step__num { color: var(--yellow); }
