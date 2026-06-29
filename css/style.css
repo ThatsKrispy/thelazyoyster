@@ -341,7 +341,20 @@ h2.script { font-size: clamp(1.7rem, 3.5vw, 2.6rem); color: var(--teal); }
 /* -- PRODUCT GRID (home — 4 tall portrait cards) ---------- */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+}
+/* Row 1: 3 cards, each span 2 of 6 cols */
+.product-grid .product-card:nth-child(1),
+.product-grid .product-card:nth-child(2),
+.product-grid .product-card:nth-child(3) {
+  grid-column: span 2;
+}
+/* Row 2: 2 cards centered — each span 2, with 1-col offset to center the pair */
+.product-grid .product-card:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+.product-grid .product-card:nth-child(5) {
+  grid-column: 4 / span 2;
 }
 .product-card {
   position: relative;
@@ -373,13 +386,30 @@ h2.script { font-size: clamp(1.7rem, 3.5vw, 2.6rem); color: var(--teal); }
 }
 .product-card .btn { align-self: flex-start; font-size: 0.75rem; padding: 9px 18px; }
 @media (max-width: 900px) {
-  .product-grid { grid-template-columns: repeat(3, 1fr); }
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  /* tablet: 2+2+1 — reset nth-child positions */
+  .product-grid .product-card:nth-child(1),
+  .product-grid .product-card:nth-child(2),
+  .product-grid .product-card:nth-child(3) { grid-column: span 2; }
+  .product-grid .product-card:nth-child(4) { grid-column: span 2; }
+  .product-grid .product-card:nth-child(5) { grid-column: 2 / span 2; }
 }
-@media (max-width: 560px) {
-  .product-grid { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 600px) {
+  .product-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  /* mobile: simple 2-col, all cards equal */
+  .product-grid .product-card:nth-child(1),
+  .product-grid .product-card:nth-child(2),
+  .product-grid .product-card:nth-child(3),
+  .product-grid .product-card:nth-child(4),
+  .product-grid .product-card:nth-child(5) {
+    grid-column: span 1;
+  }
 }
 @media (max-width: 420px) {
-  .product-grid { grid-template-columns: 1fr 1fr; }
   .product-card { aspect-ratio: 4/3; }
 }
 
