@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Events &amp; Catering | The Lazy Oyster - Live Shucking &amp; Raw Bar Miami</title>
-  <meta name="description" content="Book The Lazy Oyster for your next event. Live raw bar shucking, custom catering packages for weddings, corporate events, birthdays, and more across South Florida.">
+  <meta name="description" content="Book The Lazy Oyster for your next event. Live raw bar shucking and custom catering for weddings, corporate events, birthdays, and more across South Florida.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.thelazyoyster.com/events-catering">
   <link rel="icon" href="assets/logos/favicon.jpeg" type="image/jpeg">
@@ -14,26 +14,28 @@
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to main content</a>
-
 <header role="banner">
   <nav class="navbar" aria-label="Main navigation">
     <div class="navbar__inner">
       <a href="index.html" class="navbar__logo" aria-label="The Lazy Oyster - Home">
-        <img src="assets/logos/logo-horizontal.png" alt="The Lazy Oyster" width="180" height="54">
+        <img src="assets/logos/logo-horizontal.png" alt="The Lazy Oyster" width="170" height="52">
       </a>
       <ul class="navbar__links" role="list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="delivery.html">Delivery</a></li>
-        <li><a href="events-catering.html" class="active">Events &amp; Catering</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html" data-page="index">Home</a></li>
+        <li><a href="about.html" data-page="about">About</a></li>
+        <li><a href="delivery.html" data-page="delivery">Delivery</a></li>
+        <li><a href="events-catering.html" data-page="events">Events &amp; Catering</a></li>
+        <li><a href="faq.html" data-page="faq">FAQ</a></li>
+        <li><a href="contact.html" data-page="contact">Contact</a></li>
       </ul>
-      <div class="navbar__cta">
-        <a href="tel:3059050257" class="navbar__icon" aria-label="Call (305) 905-0257">
+      <div class="navbar__right">
+        <a href="mailto:StayLazy@TheLazyOyster.com" class="navbar__icon-btn" aria-label="Email us">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+        <a href="tel:3059050257" class="navbar__icon-btn" aria-label="Call (305) 905-0257">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.08 1.18 2 2 0 012.07 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.41-.41a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
         </a>
-        <a href="https://www.orderthelazyoyster.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Order Now</a>
+        <a href="https://www.orderthelazyoyster.com" target="_blank" rel="noopener noreferrer" class="navbar__order">Order Now</a>
         <button class="navbar__hamburger" id="hamburger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
         </button>
@@ -46,261 +48,229 @@
       <a href="events-catering.html">Events &amp; Catering</a>
       <a href="faq.html">FAQ</a>
       <a href="contact.html">Contact</a>
-      <a href="https://www.orderthelazyoyster.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Order Now</a>
+      <a href="https://www.orderthelazyoyster.com" target="_blank" rel="noopener noreferrer" class="navbar__order">Order Now</a>
     </div>
   </nav>
 </header>
-
 <main id="main-content">
 
-  <!-- HERO -->
-  <section class="ev-hero" aria-labelledby="ev-hero-title">
-    <div class="ev-hero__media">
-      <img src="assets/images/lazy-oyster-live-shucking-event.webp" alt="The Lazy Oyster team shucking oysters live at an event in Miami" width="1600" height="900" loading="eager" fetchpriority="high">
-      <div class="ev-hero__scrim" aria-hidden="true"></div>
+  <!-- HERO — stone crab / seafood spread photo like original events page -->
+  <section class="ev-hero" aria-labelledby="ev-h1">
+    <img src="assets/images/catering-setup.webp"
+         alt="The Lazy Oyster oyster bar catering setup with fresh oysters and sauces"
+         width="1600" height="700" loading="eager" fetchpriority="high">
+    <div class="ev-hero__overlay" aria-hidden="true"></div>
+    <div class="ev-hero__content container">
+      <span class="eyebrow">Oyster Bar Catering</span>
+      <h1 id="ev-h1">Shuckin Just For You</h1>
+      <p>Elevate your next event with our premier oyster catering services. Our expert shuckers bring a unique and interactive experience to your celebrations.</p>
+      <a href="#book" class="btn btn-primary">Tell Us About Your Event &darr;</a>
     </div>
-    <div class="ev-hero__inner">
-      <span class="ev-kicker ev-kicker--light">Live Raw Bar &middot; South Florida</span>
-      <h1 id="ev-hero-title" class="ev-hero__title">We bring the <em>raw bar</em> to you.</h1>
-      <p class="ev-hero__lede">Expert shuckers, oysters on ice, and a show your guests won&rsquo;t stop talking about &mdash; from backyard parties to 500-guest galas.</p>
-      <div class="ev-hero__actions">
-        <a href="#book" class="btn btn-yellow">Secure Your Date</a>
-        <a href="#packages" class="btn btn-outline-white">See Packages</a>
+  </section>
+
+  <!-- WHAT WE OFFER — image + feature list (no packages, no prices) -->
+  <section class="ev-features" aria-labelledby="features-heading">
+    <div class="ev-features__inner">
+      <div class="ev-features__head">
+        <span class="eyebrow" style="display:block;text-align:center;">Oyster Bar Catering</span>
+        <h2 id="features-heading">Shuckin Just For You</h2>
       </div>
-    </div>
-    <div class="ev-hero__marquee" aria-hidden="true">
-      <div class="ev-hero__marquee-track">
-        <span>Weddings</span><span class="dot">&bull;</span><span>Corporate</span><span class="dot">&bull;</span><span>Birthdays</span><span class="dot">&bull;</span><span>Pop-Ups</span><span class="dot">&bull;</span><span>Brand Activations</span><span class="dot">&bull;</span><span>Private Dinners</span><span class="dot">&bull;</span><span>Festivals</span><span class="dot">&bull;</span>
-        <span>Weddings</span><span class="dot">&bull;</span><span>Corporate</span><span class="dot">&bull;</span><span>Birthdays</span><span class="dot">&bull;</span><span>Pop-Ups</span><span class="dot">&bull;</span><span>Brand Activations</span><span class="dot">&bull;</span><span>Private Dinners</span><span class="dot">&bull;</span><span>Festivals</span><span class="dot">&bull;</span>
+      <div class="ev-features__grid">
+        <div class="ev-features__list">
+          <div class="ev-feature reveal">
+            <div class="ev-feature__dot"></div>
+            <div>
+              <h4>Customized Menus</h4>
+              <p>Tailored oyster selections to suit your event&rsquo;s theme and guest preferences, perfect for any special occasion.</p>
+            </div>
+          </div>
+          <div class="ev-feature reveal">
+            <div class="ev-feature__dot"></div>
+            <div>
+              <h4>Expert Shuckers</h4>
+              <p>Skilled professionals with over a decade of hospitality experience ensure every oyster is prepared to perfection.</p>
+            </div>
+          </div>
+          <div class="ev-feature reveal">
+            <div class="ev-feature__dot"></div>
+            <div>
+              <h4>Fresh and Sustainable</h4>
+              <p>Responsibly sourced oysters of the highest quality, served fresh while supporting sustainable practices.</p>
+            </div>
+          </div>
+          <div class="ev-feature reveal">
+            <div class="ev-feature__dot"></div>
+            <div>
+              <h4>Full Setup &amp; Breakdown</h4>
+              <p>We handle everything &mdash; arrival, setup, ice, garnish, shucking, and cleanup. You stay lazy and enjoy your guests.</p>
+            </div>
+          </div>
+          <div class="ev-feature reveal">
+            <div class="ev-feature__dot"></div>
+            <div>
+              <h4>Miami Lobster Rolls &amp; Ceviche</h4>
+              <p>Add our famous lobster rolls, fresh ceviche, and chargrilled oyster kits to take your event spread to the next level.</p>
+            </div>
+          </div>
+          <div style="margin-top:12px;">
+            <a href="#book" class="btn btn-primary">Request a Custom Quote &rarr;</a>
+          </div>
+        </div>
+        <div class="ev-features__img reveal">
+          <img src="assets/images/lazy-oyster-raw-bar-oysters-miami.webp"
+               alt="Fresh shucked oysters on ice at a Lazy Oyster catering event"
+               width="640" height="480" loading="lazy">
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- HOW IT WORKS -->
-  <section class="ev-how" aria-labelledby="how-title">
-    <div class="ev-how__sticky">
-      <span class="ev-kicker">How it works</span>
-      <h2 id="how-title" class="ev-how__title">Booking us is<br>the easy part.</h2>
+  <!-- OYSTERS THAT IMPRESS BAND -->
+  <div class="band" aria-labelledby="impress-heading">
+    <div class="band__bg" style="background-image:url('assets/images/oyster-raw-bar-catering-setup.webp');" aria-hidden="true"></div>
+    <div class="band__overlay" aria-hidden="true"></div>
+    <div class="band__content band--center" style="margin:0 auto;text-align:center;max-width:600px;">
+      <h2 id="impress-heading">Oysters that Impress</h2>
+      <p>Make your event memorable with The Lazy Oyster&rsquo;s exquisite oysters. Each oyster is shucked to perfection and served with care, ensuring your guests enjoy the finest flavors the ocean has to offer.</p>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS — 4 step cards -->
+  <section class="ev-how" aria-labelledby="how-heading">
+    <div class="ev-how__head">
+      <span class="eyebrow">How It Works</span>
+      <h2 id="how-heading">Booking us is the easy part.</h2>
       <p>Tell us the date and the vibe. We handle sourcing, setup, shucking, and cleanup. You stay lazy.</p>
-      <a href="#book" class="btn btn-outline-dark">Get a quote</a>
     </div>
-    <ol class="ev-how__steps" role="list">
-      <li class="ev-step reveal">
-        <span class="ev-step__num">01</span>
-        <div class="ev-step__content">
-          <h3>You reach out</h3>
-          <p>Fill out our quick form below with your date, location, and headcount. We reply within 24 hours with availability and a custom quote.</p>
-        </div>
-      </li>
-      <li class="ev-step reveal">
-        <span class="ev-step__num">02</span>
-        <div class="ev-step__content">
-          <h3>We build your menu</h3>
-          <p>Pick a package or mix and match. Oysters, lobster rolls, ceviche, chargrilled &mdash; we tailor the spread to your crowd and budget.</p>
-        </div>
-      </li>
-      <li class="ev-step reveal">
-        <span class="ev-step__num">03</span>
-        <div class="ev-step__content">
-          <h3>We set up &amp; shuck</h3>
-          <p>Our team arrives with the bar, the ice, the garnish, and the showmanship. Live shucking is the centerpiece, not an afterthought.</p>
-        </div>
-      </li>
-      <li class="ev-step reveal">
-        <span class="ev-step__num">04</span>
-        <div class="ev-step__content">
-          <h3>You stay lazy</h3>
-          <p>Mingle with your guests while we run the station and break it all down. Spotless when we leave. Memories that last.</p>
-        </div>
-      </li>
-    </ol>
+    <div class="ev-steps">
+      <div class="ev-step reveal">
+        <div class="ev-step__num">01</div>
+        <h3>Reach Out</h3>
+        <p>Fill out the form below with your date, location, and headcount. We reply within 24 hours with availability and a custom quote.</p>
+      </div>
+      <div class="ev-step reveal">
+        <div class="ev-step__num">02</div>
+        <h3>We Build Your Menu</h3>
+        <p>Oysters, lobster rolls, ceviche, chargrilled &mdash; we tailor the spread to your crowd and budget. No cookie-cutter packages.</p>
+      </div>
+      <div class="ev-step reveal">
+        <div class="ev-step__num">03</div>
+        <h3>We Set Up &amp; Shuck</h3>
+        <p>Our team arrives with the bar, the ice, the garnish, and the showmanship. Live shucking is the centerpiece, not an afterthought.</p>
+      </div>
+      <div class="ev-step reveal">
+        <div class="ev-step__num">04</div>
+        <h3>You Stay Lazy</h3>
+        <p>Mingle with your guests while we run the station and break it all down. Spotless when we leave. Memories that last.</p>
+      </div>
+    </div>
   </section>
 
-  <!-- PACKAGES (no prices) -->
-  <section class="ev-packages" id="packages" aria-labelledby="packages-title">
-    <div class="ev-packages__head">
-      <span class="ev-kicker ev-kicker--light">The Offerings</span>
-      <h2 id="packages-title">Three ways to experience The Lazy Oyster</h2>
-      <p>Every event is custom-quoted to your guest count, venue, and vision. Reach out and we&rsquo;ll build the perfect package together.</p>
-    </div>
-    <div class="ev-packages__grid">
-
-      <article class="ev-pkg reveal">
-        <span class="ev-pkg__tag">The Classic</span>
-        <h3>Raw Bar Experience</h3>
-        <p class="ev-pkg__desc">A live shucking station with fresh oysters on ice, house mignonette, cocktail sauce, lemon, and a pro shucker putting on a show. Perfect for intimate gatherings.</p>
-        <ul class="ev-pkg__list">
-          <li>Live shucking by a certified pro</li>
-          <li>Oysters on ice display setup</li>
-          <li>Mignonette &amp; cocktail sauce</li>
-          <li>Full setup &amp; breakdown included</li>
-        </ul>
-        <div class="ev-pkg__cta">
-          <a href="#book" class="btn btn-outline-white" style="width:100%;justify-content:center;">Get a Custom Quote</a>
-        </div>
-      </article>
-
-      <article class="ev-pkg ev-pkg--featured reveal">
-        <div class="ev-pkg__ribbon">Most Booked</div>
-        <span class="ev-pkg__tag">The Full Spread</span>
-        <h3>Signature Package</h3>
-        <p class="ev-pkg__desc">The complete Lazy Oyster experience. Oysters, Miami lobster rolls, fresh ceviche, premium presentation, and a dedicated coordinator running your night.</p>
-        <ul class="ev-pkg__list">
-          <li>Live oyster shucking station</li>
-          <li>Miami lobster rolls (full tray)</li>
-          <li>Fresh ceviche &amp; tortilla chips</li>
-          <li>Premium linens &amp; branded display</li>
-          <li>Dedicated event coordinator</li>
-          <li>Full setup &amp; clean breakdown</li>
-        </ul>
-        <div class="ev-pkg__cta">
-          <a href="#book" class="btn btn-yellow" style="width:100%;justify-content:center;">Reserve Your Date</a>
-        </div>
-      </article>
-
-      <article class="ev-pkg reveal">
-        <span class="ev-pkg__tag">The Pop-Up</span>
-        <h3>Mobile Raw Bar</h3>
-        <p class="ev-pkg__desc">Built for breweries, markets, rooftops, and brand activations. We bring a mobile, fully branded raw bar anywhere in South Florida. You focus on the crowd.</p>
-        <ul class="ev-pkg__list">
-          <li>Mobile setup &mdash; any venue, any location</li>
-          <li>Oysters + seasonal rotating menu</li>
-          <li>Branded, social-media-ready display</li>
-          <li>Flexible duration options</li>
-        </ul>
-        <div class="ev-pkg__cta">
-          <a href="#book" class="btn btn-outline-white" style="width:100%;justify-content:center;">Get a Custom Quote</a>
-        </div>
-      </article>
-
-    </div>
-    <p class="ev-pkg__footer" style="text-align:center;margin-top:36px;color:rgba(255,255,255,0.55);max-width:50ch;margin-left:auto;margin-right:auto;">
-      Custom menus available for any budget. <a href="#book" style="color:var(--yellow);text-decoration:underline;">Tell us what you&rsquo;re imagining</a> and we&rsquo;ll build it.
-    </p>
-  </section>
-
-  <!-- PROOF STATS -->
-  <section class="ev-proof" aria-label="Our track record">
+  <!-- STATS -->
+  <div class="ev-stats" aria-label="Our track record">
     <div class="ev-stat reveal"><strong>500+</strong><span>Events Catered</span></div>
     <div class="ev-stat reveal"><strong>19+</strong><span>Venue Partners</span></div>
     <div class="ev-stat reveal"><strong>24hr</strong><span>Quote Turnaround</span></div>
     <div class="ev-stat reveal"><strong>3</strong><span>Counties Served</span></div>
-  </section>
-
-  <!-- OYSTER IMAGE BAND -->
-  <div class="band" aria-label="Oysters that impress">
-    <div class="band__bg" style="background-image:url('assets/images/lazy-oyster-raw-bar-oysters-miami.webp');" aria-hidden="true"></div>
-    <div class="band__overlay" aria-hidden="true"></div>
-    <div class="band__content">
-      <span class="eyebrow eyebrow--yellow">Shucking Just For You</span>
-      <h2>Oysters That Impress</h2>
-      <p>Responsibly sourced from the finest waters, shucked to perfection, and served with care &mdash; your guests enjoy the best the sea has to offer. Every. Single. Time.</p>
-    </div>
   </div>
 
   <!-- BOOK FORM -->
-  <div class="bg-seafoam">
-  <section class="ev-book" id="book" aria-labelledby="book-title">
-    <div class="ev-book__intro">
-      <span class="ev-kicker">Secure Your Date</span>
-      <h2 id="book-title">Let&rsquo;s plan your event.</h2>
-      <p>Tell us the details and we&rsquo;ll get back to you within 24 hours with availability and a custom quote. No commitment required to get a quote.</p>
-      <ul class="ev-book__points" role="list">
-        <li>No deposit required to inquire</li>
-        <li>Custom menus for any budget</li>
-        <li>Miami-Dade, Broward &amp; Palm Beach</li>
-        <li>Reply within 24 hours guaranteed</li>
-      </ul>
-    </div>
-    <div class="ev-book__form-wrap">
-      <form id="catering-form" data-access-key="YOUR_WEB3FORMS_KEY" novalidate aria-label="Event catering inquiry form">
-        <input type="hidden" name="botcheck" value="" style="display:none;">
-        <input type="hidden" name="subject" value="New Catering Inquiry - The Lazy Oyster">
-        <div class="form-grid">
-          <div class="form-group">
-            <label for="first_name">First name *</label>
-            <input type="text" id="first_name" name="first_name" autocomplete="given-name" required placeholder="Alex">
+  <section class="ev-book" id="book" aria-labelledby="book-heading">
+    <div class="ev-book__inner">
+      <div class="ev-book__intro">
+        <span class="eyebrow">Bringing Freshness and Flavor to You</span>
+        <h2 id="book-heading">Tell Us About Your Event</h2>
+        <p>Ready to shuck it up? Fill out the form and we&rsquo;ll get back to you within 24 hours with availability and a custom quote. No commitment required.</p>
+        <ul class="ev-book__points" role="list">
+          <li>No deposit to get a quote</li>
+          <li>Custom menus for any budget</li>
+          <li>Miami-Dade, Broward &amp; Palm Beach</li>
+          <li>Reply within 24 hours guaranteed</li>
+        </ul>
+      </div>
+      <div class="form-wrap">
+        <form id="catering-form" data-access-key="YOUR_WEB3FORMS_KEY" novalidate aria-label="Catering inquiry form">
+          <input type="hidden" name="botcheck" value="" style="display:none">
+          <input type="hidden" name="subject" value="New Catering Inquiry - The Lazy Oyster">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="c-first">First Name *</label>
+              <input type="text" id="c-first" name="first_name" required autocomplete="given-name" placeholder="Alex">
+            </div>
+            <div class="form-group">
+              <label for="c-last">Last Name</label>
+              <input type="text" id="c-last" name="last_name" autocomplete="family-name" placeholder="Smith">
+            </div>
+            <div class="form-group">
+              <label for="c-email">Email *</label>
+              <input type="email" id="c-email" name="email" required autocomplete="email" placeholder="alex@email.com">
+            </div>
+            <div class="form-group">
+              <label for="c-phone">Phone</label>
+              <input type="tel" id="c-phone" name="phone" autocomplete="tel" placeholder="(305) 555-0100">
+            </div>
+            <div class="form-group form-group--full">
+              <label for="c-address">Event Address / Venue</label>
+              <input type="text" id="c-address" name="event_address" placeholder="1 Lincoln Rd, Miami Beach, FL">
+            </div>
+            <div class="form-group">
+              <label for="c-date">Event Date *</label>
+              <input type="date" id="c-date" name="event_date" required>
+            </div>
+            <div class="form-group">
+              <label for="c-time">Event Time</label>
+              <input type="time" id="c-time" name="event_time">
+            </div>
+            <div class="form-group">
+              <label for="c-guests">Guest Count</label>
+              <input type="number" id="c-guests" name="guest_count" min="1" placeholder="50">
+            </div>
+            <div class="form-group">
+              <label for="c-type">Event Type</label>
+              <select id="c-type" name="event_type">
+                <option value="">Select...</option>
+                <option>Wedding</option>
+                <option>Corporate Event</option>
+                <option>Birthday Party</option>
+                <option>Pop-Up / Brand Activation</option>
+                <option>Private Dinner</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group form-group--full">
+              <label for="c-details">What are we celebrating?</label>
+              <textarea id="c-details" name="celebration" placeholder="Tell us about your event &mdash; the vibe, special requests, or anything that will help us make it perfect!"></textarea>
+            </div>
+            <div class="form-submit">
+              <button type="submit" class="btn btn-primary">Send &rarr;</button>
+            </div>
+            <p class="form-status" role="alert" aria-live="polite"></p>
           </div>
-          <div class="form-group">
-            <label for="last_name">Last name *</label>
-            <input type="text" id="last_name" name="last_name" autocomplete="family-name" required placeholder="Smith">
-          </div>
-          <div class="form-group">
-            <label for="email">Email *</label>
-            <input type="email" id="email" name="email" autocomplete="email" required placeholder="alex@email.com">
-          </div>
-          <div class="form-group">
-            <label for="phone">Phone</label>
-            <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(305) 555-0100">
-          </div>
-          <div class="form-group form-group--full">
-            <label for="event_address">Event Address / Venue</label>
-            <input type="text" id="event_address" name="event_address" placeholder="1 Lincoln Rd, Miami Beach, FL">
-          </div>
-          <div class="form-group">
-            <label for="event_date">Event Date *</label>
-            <input type="date" id="event_date" name="event_date" required>
-          </div>
-          <div class="form-group">
-            <label for="event_time">Event Time</label>
-            <input type="time" id="event_time" name="event_time">
-          </div>
-          <div class="form-group">
-            <label for="guest_count">Approximate Guest Count</label>
-            <input type="number" id="guest_count" name="guest_count" min="1" placeholder="50">
-          </div>
-          <div class="form-group">
-            <label for="package">Package Interest</label>
-            <select id="package" name="package">
-              <option value="">Select a package...</option>
-              <option value="raw-bar">Raw Bar Experience (Classic)</option>
-              <option value="signature">Signature Package (Full Spread)</option>
-              <option value="popup">Mobile Raw Bar (Pop-Up)</option>
-              <option value="custom">Not sure - let&apos;s talk!</option>
-            </select>
-          </div>
-          <div class="form-group form-group--full">
-            <label for="celebration">What are we celebrating?</label>
-            <textarea id="celebration" name="celebration" placeholder="Tell us about your event - the vibe, any special requests, or anything that will help us make it perfect!"></textarea>
-          </div>
-          <div class="form-submit">
-            <button type="submit" class="btn btn-primary">Send My Inquiry &rarr;</button>
-          </div>
-          <p class="form-status" role="alert" aria-live="polite"></p>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
   </section>
-  </div>
 
   <!-- NEWSLETTER -->
-  <section class="newsletter" aria-labelledby="newsletter-heading-events">
+  <section class="newsletter" aria-labelledby="newsletter-events">
     <div class="newsletter__inner">
-      <span class="eyebrow" style="justify-content:center;">Stay in the Loop</span>
-      <h2 id="newsletter-heading-events">Join the Oyster Club!</h2>
+      <h2 id="newsletter-events">Sign up for our newsletter!</h2>
       <p>Get first access to pop-up dates, new menu drops, and exclusive event offers.</p>
-      <form class="newsletter-form" id="newsletter-form-events" data-access-key="YOUR_WEB3FORMS_KEY" novalidate>
-        <input type="hidden" name="botcheck" value="" style="display:none;">
-        <input type="text" name="name" placeholder="Your Name" required autocomplete="given-name">
-        <input type="email" name="email" placeholder="Your Email" required autocomplete="email">
-        <button type="submit" class="btn btn-teal" style="background:var(--teal);color:#fff;border:2px solid var(--teal);">Sign Up</button>
+      <form class="newsletter-form" data-access-key="YOUR_WEB3FORMS_KEY" novalidate>
+        <input type="hidden" name="botcheck" value="" style="display:none">
+        <input type="text" name="name" placeholder="Name" required autocomplete="given-name">
+        <input type="email" name="email" placeholder="Email" required autocomplete="email">
+        <button type="submit" class="btn btn-primary">Sign Up</button>
       </form>
     </div>
-    <img src="assets/images/lazy-oyster-mascot-couch.png" alt="" aria-hidden="true" class="newsletter__mascot" loading="lazy">
+    <img src="assets/logos/logo-mascot.webp" alt="" aria-hidden="true" class="newsletter__mascot" loading="lazy">
   </section>
 
 </main>
-
 <footer class="footer" role="contentinfo">
-  <div class="footer__inner">
-    <p class="footer__copy">Copyright &copy; 2025 TheLazyOyster.com</p>
-    <nav class="footer__links" aria-label="Footer navigation">
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="accessibility.html">Accessibility</a>
-    </nav>
-  </div>
+  <p class="footer__copy">Copyright &copy; 2025 TheLazyOyster.com</p>
+  <nav class="footer__links" aria-label="Footer links"><a href="privacy.html">Privacy Policy</a><a href="accessibility.html">Accessibility</a></nav>
 </footer>
-
 <script src="js/a11y-consent.js" defer></script>
 <script src="js/main.js" defer></script>
 </body>

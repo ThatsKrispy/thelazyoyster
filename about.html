@@ -17,165 +17,167 @@
 <header role="banner">
   <nav class="navbar" aria-label="Main navigation">
     <div class="navbar__inner">
-      <a href="index.html" class="navbar__logo" aria-label="The Lazy Oyster - Home"><img src="assets/logos/logo-horizontal.png" alt="The Lazy Oyster" width="180" height="54"></a>
+      <a href="index.html" class="navbar__logo" aria-label="The Lazy Oyster - Home">
+        <img src="assets/logos/logo-horizontal.png" alt="The Lazy Oyster" width="170" height="52">
+      </a>
       <ul class="navbar__links" role="list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-        <li><a href="delivery.html">Delivery</a></li>
-        <li><a href="events-catering.html">Events &amp; Catering</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html" data-page="index">Home</a></li>
+        <li><a href="about.html" data-page="about">About</a></li>
+        <li><a href="delivery.html" data-page="delivery">Delivery</a></li>
+        <li><a href="events-catering.html" data-page="events">Events &amp; Catering</a></li>
+        <li><a href="faq.html" data-page="faq">FAQ</a></li>
+        <li><a href="contact.html" data-page="contact">Contact</a></li>
       </ul>
-      <div class="navbar__cta">
-        <a href="tel:3059050257" class="navbar__icon" aria-label="Call (305) 905-0257"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.08 1.18 2 2 0 012.07 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.41-.41a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></a>
-        <a href="https://www.orderthelazyoyster.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Order Now</a>
-        <button class="navbar__hamburger" id="hamburger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+      <div class="navbar__right">
+        <a href="mailto:StayLazy@TheLazyOyster.com" class="navbar__icon-btn" aria-label="Email us">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+        <a href="tel:3059050257" class="navbar__icon-btn" aria-label="Call (305) 905-0257">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.08 1.18 2 2 0 012.07 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.41-.41a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        </a>
+        <a href="https://www.orderthelazyoyster.com" target="_blank" rel="noopener noreferrer" class="navbar__order">Order Now</a>
+        <button class="navbar__hamburger" id="hamburger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
       </div>
     </div>
     <div class="navbar__mobile" id="mobile-nav" role="navigation" aria-label="Mobile navigation">
-      <a href="index.html">Home</a><a href="about.html">About</a><a href="delivery.html">Delivery</a><a href="events-catering.html">Events &amp; Catering</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a>
-      <a href="https://www.orderthelazyoyster.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Order Now</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="delivery.html">Delivery</a>
+      <a href="events-catering.html">Events &amp; Catering</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://www.orderthelazyoyster.com" target="_blank" rel="noopener noreferrer" class="navbar__order">Order Now</a>
     </div>
   </nav>
 </header>
-
 <main id="main-content">
 
-  <!-- PAGE HERO -->
-  <section class="page-hero" aria-labelledby="about-hero-title">
-    <div class="page-hero__media">
-      <img src="assets/images/lazy-oyster-lobster-roll-closeup.webp" alt="Miami lobster rolls from The Lazy Oyster" width="1600" height="700" loading="eager" fetchpriority="high">
-      <div class="page-hero__overlay" aria-hidden="true"></div>
-    </div>
-    <div class="page-hero__content">
-      <span class="eyebrow eyebrow--yellow">Miami's First Traveling Oyster Bar</span>
-      <h1 id="about-hero-title">If you can laugh together,<br>you can work together.</h1>
-      <p>The story behind The Lazy Oyster and the shuckers who built it.</p>
-    </div>
-  </section>
-
-  <!-- FOUNDERS SECTION -->
-  <section class="section" aria-labelledby="founders-heading">
-    <div class="founders-card fade-up">
-      <img src="assets/images/lazy-oyster-founders-alex-brandon.webp"
-           alt="Alex Gilardi and Brandon Mesa, founders of The Lazy Oyster" 
-           class="founders-card__img" width="700" height="440" loading="lazy">
-      <div class="founders-card__body">
-        <span class="eyebrow eyebrow--yellow">Meet the Shuckers</span>
-        <h2 id="founders-heading">Alex &amp; Brandon</h2>
-        <h3>The dynamic duo behind The Lazy Oyster</h3>
-        <p>The Lazy Oyster started in 2020 as Miami&rsquo;s first oyster delivery service, quickly evolving into a full raw bar catering experience that shows up anywhere in South Florida.</p>
-        <p>Founded by lifelong friends Alex Gilardi and Brandon Mesa, our mission is simple: bring high-quality, responsibly sourced oysters to your events and pop-ups around the city.</p>
-        <p>With over 10 years of combined hospitality experience between them, Alex and Brandon believe that oysters are a symbol of celebration and joy. After all &mdash; who can be sad while eating an oyster?</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHY CHOOSE US -->
-  <section class="section" aria-labelledby="values-heading">
-    <div style="text-align:center;margin-bottom:clamp(36px,5vw,60px);">
-      <span class="eyebrow" style="justify-content:center;">Why Choose Us</span>
-      <h2 id="values-heading">We choose quality and<br>quantity, and vice-versa.</h2>
-      <p style="max-width:52ch;margin:14px auto 0;">At The Lazy Oyster, we are dedicated to delivering an exceptional culinary experience that transcends ordinary taste boundaries.</p>
-    </div>
-    <div class="values-grid">
-      <div class="value-badge reveal">
-        <div class="value-badge__icon" aria-hidden="true">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <h3>Freshness First</h3>
-        <p>Our oysters are sourced from the finest waters, ensuring every bite is a testament to quality. No shortcuts, no compromises.</p>
-      </div>
-      <div class="value-badge reveal">
-        <div class="value-badge__icon" aria-hidden="true">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        </div>
-        <h3>A Growing Brand</h3>
-        <p>Since 2020, The Lazy Oyster has become a Miami staple known for fresh oysters and exceptional service. We continue to expand across South Florida.</p>
-      </div>
-      <div class="value-badge reveal">
-        <div class="value-badge__icon" aria-hidden="true">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
-        </div>
-        <h3>We Love Our Fans</h3>
-        <p>Our community is everything. Your support drives us to keep delivering the best oysters and unforgettable experiences. Follow us on Instagram!</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CATERING CTA BAND -->
-  <div class="band" aria-labelledby="about-catering-heading">
-    <div class="band__bg" style="background-image:url('assets/images/lazy-oyster-live-shucking-event.webp');" aria-hidden="true"></div>
-    <div class="band__overlay" aria-hidden="true"></div>
-    <div class="band__content">
-      <span class="eyebrow eyebrow--yellow">Event Catering &amp; Live Shucking</span>
-      <h2 id="about-catering-heading">Book Us for Your Next Event!</h2>
-      <p>Ready to shuck it up with The Lazy Oyster? Contact us today to discuss your event details and reserve your date. We bring the best of the sea to your celebration.</p>
-      <a href="events-catering.html" class="btn btn-yellow">Check Date Availability &rarr;</a>
+  <!-- HERO — lobster roll hero matching original screenshot -->
+  <div class="page-hero" aria-label="About The Lazy Oyster">
+    <img src="assets/images/about-lobster-roll-hero.webp"
+         alt="Miami lobster rolls and oysters from The Lazy Oyster"
+         width="1600" height="600" loading="eager" fetchpriority="high">
+    <div class="page-hero__overlay" aria-hidden="true"></div>
+    <div class="page-hero__caption container">
+      <span class="eyebrow" style="color:var(--yellow)">Miami's First Traveling Oyster Bar</span>
+      <h1>If you can laugh together,<br>you can work together.</h1>
     </div>
   </div>
 
-  <!-- PARTNER LOGOS -->
-  <section class="section-full" aria-labelledby="partners-heading-about" style="padding-bottom:0;">
-    <div class="container text-center" style="margin-bottom:32px;">
-      <span class="eyebrow" style="justify-content:center;">Come Check Us Out</span>
-      <h2 id="partners-heading-about" style="margin-top:8px;">The Lazy Oyster Has Been Shucking at Some of Miami&rsquo;s Hottest Spots!</h2>
-    </div>
-    <div class="ticker-wrap" aria-label="Partner venues">
-      <div class="ticker-track" aria-hidden="true">
-        <img src="assets/partner-logos/jefferson-ocean.webp" alt="Jefferson's Ocean" loading="lazy" width="120" height="42">
-        <img src="assets/partner-logos/smorgasburg.webp" alt="Smorgasburg" loading="lazy" width="120" height="42">
-        <img src="assets/partner-logos/sobewff.webp" alt="South Beach Wine and Food Festival" loading="lazy" width="120" height="42">
-        <img src="assets/partner-logos/sunshine-market.webp" alt="Sunshine Market" loading="lazy" width="120" height="42">
-        <img src="assets/partner-logos/wolfes-wine.webp" alt="Wolfe's Wine Shoppe" loading="lazy" width="120" height="42">
-        <img src="assets/partner-logos/abi-maria.webp" alt="Abi Maria" loading="lazy" width="120" height="42">
-        <img src="assets/partner-logos/cebada-rooftop.webp" alt="Cebada Rooftop" loading="lazy" width="120" height="42">
-        <img src="assets/partner-logos/city-cigar.webp" alt="City Cigar Lounge" loading="lazy" width="120" height="42">
-        <img src="assets/partner-logos/gateway-market.webp" alt="Gateway Market" loading="lazy" width="120" height="42">
-        <img src="assets/partner-logos/j-wakefield.webp" alt="J Wakefield Brewing" loading="lazy" width="120" height="42">
-        <img src="assets/partner-logos/terras.webp" alt="Terras" loading="lazy" width="120" height="42">
-        <img src="assets/partner-logos/tripping-animals.webp" alt="Tripping Animals Brewing" loading="lazy" width="120" height="42">
-        <img src="assets/partner-logos/unbranded.webp" alt="Unbranded" loading="lazy" width="120" height="42">
-        <img src="assets/partner-logos/jefferson-ocean.webp" alt="" loading="lazy" width="120" height="42">
-        <img src="assets/partner-logos/smorgasburg.webp" alt="" loading="lazy" width="120" height="42">
-        <img src="assets/partner-logos/sobewff.webp" alt="" loading="lazy" width="120" height="42">
-        <img src="assets/partner-logos/sunshine-market.webp" alt="" loading="lazy" width="120" height="42">
-        <img src="assets/partner-logos/wolfes-wine.webp" alt="" loading="lazy" width="120" height="42">
-        <img src="assets/partner-logos/abi-maria.webp" alt="" loading="lazy" width="120" height="42">
-        <img src="assets/partner-logos/cebada-rooftop.webp" alt="" loading="lazy" width="120" height="42">
-        <img src="assets/partner-logos/city-cigar.webp" alt="" loading="lazy" width="120" height="42">
-        <img src="assets/partner-logos/gateway-market.webp" alt="" loading="lazy" width="120" height="42">
-        <img src="assets/partner-logos/j-wakefield.webp" alt="" loading="lazy" width="120" height="42">
-        <img src="assets/partner-logos/terras.webp" alt="" loading="lazy" width="120" height="42">
-        <img src="assets/partner-logos/tripping-animals.webp" alt="" loading="lazy" width="120" height="42">
-        <img src="assets/partner-logos/unbranded.webp" alt="" loading="lazy" width="120" height="42">
+  <!-- FOUNDERS SPLIT -->
+  <div class="section">
+    <div class="intro-split">
+      <div class="intro-split__text fade-up">
+        <span class="eyebrow">Miami's First Traveling Oyster Bar</span>
+        <h2>If you can laugh together, you can work together.</h2>
+        <p>The Lazy Oyster started in 2020 as Miami&rsquo;s first oyster delivery service, quickly evolving into a full raw bar catering experience.</p>
+        <p>Founded by lifelong friends Alex Gilardi and Brandon Mesa, our mission is to bring high-quality, responsibly sourced oysters to your events and pop-ups around the city.</p>
+      </div>
+      <div class="intro-split__img fade-up">
+        <img src="assets/images/lazy-oyster-founders-alex-brandon.webp"
+             alt="Alex Gilardi and Brandon Mesa at their oyster bar setup"
+             width="640" height="480" loading="lazy">
       </div>
     </div>
-  </section>
+  </div>
+
+  <!-- BOOK US BAND -->
+  <div class="band" aria-labelledby="about-book-heading">
+    <div class="band__bg" style="background-image:url('assets/images/lazy-oyster-raw-bar-oysters-miami.webp');" aria-hidden="true"></div>
+    <div class="band__overlay" aria-hidden="true"></div>
+    <div class="band__content">
+      <h2 id="about-book-heading">Book Us for Your Next Event!</h2>
+      <p>Ready to shuck it up with The Lazy Oyster? Contact us today to discuss your event details and reserve your date.</p>
+      <p>You can reach us by email at StayLazy@TheLazyOyster.com, send us a message on Instagram, or call us at (305) 905-0257.</p>
+      <p>Let us bring the best of the sea to your celebration and make it a shucking good time!</p>
+      <a href="events-catering.html" class="btn btn-primary" style="margin-top:8px;">Check Your Date Availability &rarr;</a>
+    </div>
+  </div>
+
+  <!-- MEET THE SHUCKERS -->
+  <div class="section">
+    <div class="commitment-split">
+      <div class="commitment-split__img fade-up">
+        <img src="assets/images/founders-smiling.webp"
+             alt="Alexander Gilardi and Brandon Mesa, founders of The Lazy Oyster, smiling"
+             width="640" height="480" loading="lazy">
+      </div>
+      <div class="commitment-split__text fade-up">
+        <span class="eyebrow">Meet the Shuckers</span>
+        <h2>Alexander Gilardi and Brandon Mesa are the dynamic duo behind The Lazy Oyster, driven by their passion for shucking and serving.</h2>
+        <p>With over 10 years of experience in the hospitality industry, Alex brings a wealth of knowledge and expertise. Brandon, also from a hospitality background, shares a deep commitment to exceptional service.</p>
+        <p>They believe that oysters are a symbol of celebration and joy. After all, who can be sad while eating an oyster? Oysters are enjoyed during special moments, marking the start of something great.</p>
+        <p>At The Lazy Oyster, we believe that every time you enjoy our oysters, you&rsquo;re on the brink of a memorable experience. We love shucking oysters for you because they signify the beginning of your great days and nights.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FRESHNESS CEVICHE BAND -->
+  <div class="band" aria-labelledby="ceviche-heading">
+    <div class="band__bg" style="background-image:url('assets/images/miami-fresh-ceviche.webp');" aria-hidden="true"></div>
+    <div class="band__overlay" aria-hidden="true"></div>
+    <div class="band__content">
+      <h2 id="ceviche-heading">Miami&rsquo;s Freshest Ceviche Experience</h2>
+      <p>At The Lazy Oyster, we believe ceviche is more than just a dish &mdash; it&rsquo;s a celebration of freshness and flavor. Our signature recipe blends hand cut seafood, crisp vegetables, and bright citrus to capture the essence of Miami in every bite.</p>
+      <p>Whether you&rsquo;re hosting guests or treating yourself, our ceviche brings a burst of coastal energy and elegance to any occasion.</p>
+    </div>
+  </div>
+
+  <!-- COMMITMENT SPLIT -->
+  <div class="section">
+    <div class="commitment-split">
+      <div class="commitment-split__img fade-up">
+        <img src="assets/images/catering-event.webp"
+             alt="The Lazy Oyster team at an oyster catering event"
+             width="640" height="480" loading="lazy">
+      </div>
+      <div class="commitment-split__text fade-up">
+        <span class="eyebrow">Our Commitment</span>
+        <h2>Freshness, Quality, and Sustainability</h2>
+        <p>At The Lazy Oyster, we are committed to delivering the freshest oysters, sourced responsibly from local farms.</p>
+        <p>Our meticulous attention to quality and sustainability ensures that every oyster we serve is a testament to our dedication. Whether at intimate gatherings or large events, we strive to create memorable experiences, one oyster at a time.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PARTNERS BAND -->
+  <div style="background:var(--teal);padding:clamp(36px,5vw,56px) var(--pad-x);text-align:center;" aria-labelledby="partners-about-heading">
+    <span class="eyebrow" style="color:var(--yellow);display:block;text-align:center;margin-bottom:10px;">Come Check Us Out</span>
+    <h2 id="partners-about-heading" style="color:#fff;margin-bottom:32px;">The Lazy Oyster has been shucking at some of Miami&rsquo;s hottest spots!</h2>
+    <div class="partner-grid" style="max-width:var(--max-w);margin:0 auto;">
+      <img src="assets/partner-logos/jefferson-ocean.webp" alt="Jefferson's Ocean" loading="lazy" width="100" height="36">
+      <img src="assets/partner-logos/gateway-market.webp" alt="Gateway Market" loading="lazy" width="100" height="36">
+      <img src="assets/partner-logos/sunshine-market.webp" alt="Sunshine Market" loading="lazy" width="100" height="36">
+      <img src="assets/partner-logos/unbranded.webp" alt="Unbranded" loading="lazy" width="100" height="36">
+      <img src="assets/partner-logos/tripping-animals.webp" alt="Tripping Animals Brewing" loading="lazy" width="100" height="36">
+      <img src="assets/partner-logos/wolfes-wine.webp" alt="Wolfe's Wine Shoppe" loading="lazy" width="100" height="36">
+      <img src="assets/partner-logos/terras.webp" alt="Terras" loading="lazy" width="100" height="36">
+      <img src="assets/partner-logos/abi-maria.webp" alt="Abi Maria" loading="lazy" width="100" height="36">
+      <img src="assets/partner-logos/cebada-rooftop.webp" alt="Cebada Rooftop" loading="lazy" width="100" height="36">
+    </div>
+  </div>
 
   <!-- NEWSLETTER -->
-  <section class="newsletter" aria-labelledby="newsletter-heading-about">
+  <section class="newsletter" aria-labelledby="newsletter-about">
     <div class="newsletter__inner">
-      <span class="eyebrow" style="justify-content:center;">Stay Lazy</span>
-      <h2 id="newsletter-heading-about">Sign up for our newsletter!</h2>
+      <h2 id="newsletter-about">Sign up for our newsletter!</h2>
       <p>Get first access to pop-up dates, new menu drops, and exclusive deals.</p>
-      <form class="newsletter-form" id="newsletter-form-about" data-access-key="YOUR_WEB3FORMS_KEY" novalidate>
-        <input type="hidden" name="botcheck" value="" style="display:none;">
+      <form class="newsletter-form" data-access-key="YOUR_WEB3FORMS_KEY" novalidate>
+        <input type="hidden" name="botcheck" value="" style="display:none">
         <input type="text" name="name" placeholder="Name" required autocomplete="given-name">
         <input type="email" name="email" placeholder="Email" required autocomplete="email">
         <button type="submit" class="btn btn-primary">Sign Up</button>
       </form>
     </div>
-    <img src="assets/images/lazy-oyster-mascot-couch.png" alt="" aria-hidden="true" class="newsletter__mascot" loading="lazy">
+    <img src="assets/logos/logo-mascot.webp" alt="" aria-hidden="true" class="newsletter__mascot" loading="lazy">
   </section>
 
 </main>
-
 <footer class="footer" role="contentinfo">
-  <div class="footer__inner">
-    <p class="footer__copy">Copyright &copy; 2025 TheLazyOyster.com</p>
-    <nav class="footer__links" aria-label="Footer navigation"><a href="privacy.html">Privacy Policy</a><a href="accessibility.html">Accessibility</a></nav>
-  </div>
+  <p class="footer__copy">Copyright &copy; 2025 TheLazyOyster.com</p>
+  <nav class="footer__links" aria-label="Footer links"><a href="privacy.html">Privacy Policy</a><a href="accessibility.html">Accessibility</a></nav>
 </footer>
 <script src="js/a11y-consent.js" defer></script>
 <script src="js/main.js" defer></script>

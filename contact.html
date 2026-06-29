@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | The Lazy Oyster Miami - Get in Touch</title>
-  <meta name="description" content="Contact The Lazy Oyster Miami for oyster delivery orders, event catering inquiries, and booking. Call, email, or DM us on Instagram.">
+  <meta name="description" content="Contact The Lazy Oyster Miami for oyster delivery, event catering, and booking. Call, email, or DM us on Instagram.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.thelazyoyster.com/contact">
   <link rel="icon" href="assets/logos/favicon.jpeg" type="image/jpeg">
@@ -17,143 +17,155 @@
 <header role="banner">
   <nav class="navbar" aria-label="Main navigation">
     <div class="navbar__inner">
-      <a href="index.html" class="navbar__logo" aria-label="The Lazy Oyster - Home"><img src="assets/logos/logo-horizontal.png" alt="The Lazy Oyster" width="180" height="54"></a>
+      <a href="index.html" class="navbar__logo" aria-label="The Lazy Oyster - Home">
+        <img src="assets/logos/logo-horizontal.png" alt="The Lazy Oyster" width="170" height="52">
+      </a>
       <ul class="navbar__links" role="list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="delivery.html">Delivery</a></li>
-        <li><a href="events-catering.html">Events &amp; Catering</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="index.html" data-page="index">Home</a></li>
+        <li><a href="about.html" data-page="about">About</a></li>
+        <li><a href="delivery.html" data-page="delivery">Delivery</a></li>
+        <li><a href="events-catering.html" data-page="events">Events &amp; Catering</a></li>
+        <li><a href="faq.html" data-page="faq">FAQ</a></li>
+        <li><a href="contact.html" data-page="contact">Contact</a></li>
       </ul>
-      <div class="navbar__cta">
-        <a href="tel:3059050257" class="navbar__icon" aria-label="Call (305) 905-0257"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.08 1.18 2 2 0 012.07 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.41-.41a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></a>
-        <a href="https://www.orderthelazyoyster.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Order Now</a>
-        <button class="navbar__hamburger" id="hamburger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+      <div class="navbar__right">
+        <a href="mailto:StayLazy@TheLazyOyster.com" class="navbar__icon-btn" aria-label="Email us">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+        <a href="tel:3059050257" class="navbar__icon-btn" aria-label="Call (305) 905-0257">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.08 1.18 2 2 0 012.07 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.41-.41a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        </a>
+        <a href="https://www.orderthelazyoyster.com" target="_blank" rel="noopener noreferrer" class="navbar__order">Order Now</a>
+        <button class="navbar__hamburger" id="hamburger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
       </div>
     </div>
     <div class="navbar__mobile" id="mobile-nav" role="navigation" aria-label="Mobile navigation">
-      <a href="index.html">Home</a><a href="about.html">About</a><a href="delivery.html">Delivery</a><a href="events-catering.html">Events &amp; Catering</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a>
-      <a href="https://www.orderthelazyoyster.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Order Now</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="delivery.html">Delivery</a>
+      <a href="events-catering.html">Events &amp; Catering</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://www.orderthelazyoyster.com" target="_blank" rel="noopener noreferrer" class="navbar__order">Order Now</a>
     </div>
   </nav>
 </header>
-
 <main id="main-content">
 
-  <!-- PAGE HERO -->
-  <section class="page-hero" aria-labelledby="contact-hero-title">
-    <div class="page-hero__media">
-      <img src="assets/images/lazy-oyster-sauce-lineup.webp" alt="The Lazy Oyster signature sauce lineup" width="1600" height="700" loading="eager" fetchpriority="high">
-      <div class="page-hero__overlay" aria-hidden="true"></div>
-    </div>
-    <div class="page-hero__content">
-      <span class="eyebrow eyebrow--yellow">We're Here to Help With All Your Shucking Needs</span>
-      <h1 id="contact-hero-title">Get in Touch</h1>
-      <p>Have questions or ready to book us for your next event? We&rsquo;d love to hear from you.</p>
-    </div>
-  </section>
+  <!-- HERO — sauce lineup photo matching original contact page -->
+  <div class="page-hero">
+    <img src="assets/images/catering-setup.webp"
+         alt="The Lazy Oyster signature sauce lineup and oysters on ice"
+         width="1600" height="600" loading="eager" fetchpriority="high">
+    <div class="page-hero__overlay" aria-hidden="true"></div>
+  </div>
 
   <!-- CONTACT SECTION -->
-  <section class="section" style="background:var(--white);" aria-labelledby="contact-main-heading">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:start;" class="contact-main-grid">
-      <!-- Left: contact info -->
+  <div class="section">
+    <div class="contact-split">
+      <!-- Left: info + cards -->
       <div>
-        <span class="eyebrow">Let&rsquo;s Connect</span>
-        <h2 id="contact-main-heading">Reach Out</h2>
-        <p>Contact us via phone, email, or Instagram and we&rsquo;ll get back to you as soon as possible. We look forward to hearing from you!</p>
+        <span class="eyebrow">We're Here to Help With All Your Shucking Needs</span>
+        <h2>Get in Touch</h2>
+        <p style="margin-bottom:32px;">Have questions or ready to book us for your next event? Contact us via email, phone, or Instagram, and we&rsquo;ll get back to you as soon as possible. We look forward to hearing from you!</p>
 
-        <div class="contact-cards" style="grid-template-columns:1fr;margin-top:32px;">
-          <a href="tel:3059050257" class="contact-card" aria-label="Call us at (305) 905-0257">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.08 1.18 2 2 0 012.07 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.41-.41a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        <div class="contact-info-cards">
+          <a href="tel:3059050257" class="contact-card" aria-label="Call (305) 905-0257">
+            <div class="contact-card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.08 1.18 2 2 0 012.07 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.41-.41a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
             <span class="contact-card__label">Let&rsquo;s Talk</span>
             <span class="contact-card__val">(305) 905-0257</span>
           </a>
-          <a href="https://www.instagram.com/TheLazyOyster" target="_blank" rel="noopener noreferrer" class="contact-card" aria-label="Follow us on Instagram @TheLazyOyster">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          <a href="https://www.instagram.com/TheLazyOyster" target="_blank" rel="noopener noreferrer" class="contact-card" aria-label="Follow @TheLazyOyster on Instagram">
+            <div class="contact-card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </div>
             <span class="contact-card__label">Follow Our IG</span>
             <span class="contact-card__val">@TheLazyOyster</span>
           </a>
-          <a href="mailto:StayLazy@TheLazyOyster.com" class="contact-card" aria-label="Email us at StayLazy@TheLazyOyster.com">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:StayLazy@TheLazyOyster.com" class="contact-card" aria-label="Email StayLazy@TheLazyOyster.com">
+            <div class="contact-card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
             <span class="contact-card__label">Email Us</span>
             <span class="contact-card__val">StayLazy@TheLazyOyster.com</span>
           </a>
         </div>
       </div>
       <!-- Right: photo -->
-      <div>
-        <img src="assets/images/lazy-oyster-shucking-at-bar.webp"
-             alt="The Lazy Oyster founder shucking oysters at a raw bar event"
-             width="600" height="500" loading="lazy"
-             style="border-radius:var(--r-xl);width:100%;height:420px;object-fit:cover;box-shadow:var(--sh-xl);">
+      <div class="contact-split__img fade-up">
+        <img src="assets/images/catering-event.webp"
+             alt="The Lazy Oyster shucking oysters at a live event"
+             width="640" height="500" loading="lazy">
       </div>
     </div>
-  </section>
+  </div>
 
   <!-- CONTACT FORM -->
-  <section class="section" aria-labelledby="contact-form-heading">
-    <div style="text-align:center;margin-bottom:36px;">
-      <span class="eyebrow" style="justify-content:center;">Send a Message</span>
-      <h2 id="contact-form-heading">How can we help?</h2>
+  <div style="background:var(--off-white);padding:var(--section-y) var(--pad-x);">
+    <div style="max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,6vw,64px);align-items:start;" class="contact-form-grid">
+      <div>
+        <span class="eyebrow">Send a Message</span>
+        <h2>How can we help?</h2>
+        <p style="margin-top:12px;">Whether you&rsquo;re looking to place an order, book an event, or just say hello &mdash; we&rsquo;re always happy to hear from you. Fill out the form and we&rsquo;ll get back to you within 24 hours.</p>
+      </div>
+      <div class="form-wrap">
+        <form id="contact-form" data-access-key="YOUR_WEB3FORMS_KEY" novalidate aria-label="Contact form">
+          <input type="hidden" name="botcheck" value="" style="display:none">
+          <input type="hidden" name="subject" value="Contact Inquiry - The Lazy Oyster">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="cf-first">First Name *</label>
+              <input type="text" id="cf-first" name="first_name" required autocomplete="given-name" placeholder="Alex">
+            </div>
+            <div class="form-group">
+              <label for="cf-last">Last Name</label>
+              <input type="text" id="cf-last" name="last_name" autocomplete="family-name" placeholder="Smith">
+            </div>
+            <div class="form-group">
+              <label for="cf-email">Email *</label>
+              <input type="email" id="cf-email" name="email" required autocomplete="email" placeholder="alex@email.com">
+            </div>
+            <div class="form-group">
+              <label for="cf-phone">Phone</label>
+              <input type="tel" id="cf-phone" name="phone" autocomplete="tel" placeholder="(305) 555-0100">
+            </div>
+            <div class="form-group form-group--full">
+              <label for="cf-message">Message *</label>
+              <textarea id="cf-message" name="message" required placeholder="How can we help you?"></textarea>
+            </div>
+            <div class="form-submit">
+              <button type="submit" class="btn btn-primary">Send &rarr;</button>
+            </div>
+            <p class="form-status" role="alert" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
     </div>
-    <div class="contact-form-wrap" style="margin:0 auto;">
-      <form id="contact-form" data-access-key="YOUR_WEB3FORMS_KEY" novalidate aria-label="Contact form">
-        <input type="hidden" name="botcheck" value="" style="display:none;">
-        <input type="hidden" name="subject" value="Contact Inquiry - The Lazy Oyster">
-        <div class="form-grid">
-          <div class="form-group">
-            <label for="c-first">First Name *</label>
-            <input type="text" id="c-first" name="first_name" required autocomplete="given-name" placeholder="Alex">
-          </div>
-          <div class="form-group">
-            <label for="c-last">Last Name</label>
-            <input type="text" id="c-last" name="last_name" autocomplete="family-name" placeholder="Smith">
-          </div>
-          <div class="form-group">
-            <label for="c-email">Email *</label>
-            <input type="email" id="c-email" name="email" required autocomplete="email" placeholder="alex@email.com">
-          </div>
-          <div class="form-group">
-            <label for="c-phone">Phone</label>
-            <input type="tel" id="c-phone" name="phone" autocomplete="tel" placeholder="(305) 555-0100">
-          </div>
-          <div class="form-group form-group--full">
-            <label for="c-message">Message *</label>
-            <textarea id="c-message" name="message" required placeholder="Tell us how we can help..."></textarea>
-          </div>
-          <div class="form-submit">
-            <button type="submit" class="btn btn-primary">Send Message &rarr;</button>
-          </div>
-          <p class="form-status" role="alert" aria-live="polite"></p>
-        </div>
-      </form>
-    </div>
-  </section>
+  </div>
 
   <!-- NEWSLETTER -->
-  <section class="newsletter" aria-labelledby="newsletter-heading-contact">
+  <section class="newsletter" aria-labelledby="newsletter-contact">
     <div class="newsletter__inner">
-      <span class="eyebrow" style="justify-content:center;">Stay Lazy</span>
-      <h2 id="newsletter-heading-contact">Sign up for our newsletter!</h2>
+      <h2 id="newsletter-contact">Sign up for our newsletter!</h2>
       <p>Get first access to pop-up dates, new menu drops, and exclusive deals.</p>
-      <form class="newsletter-form" id="newsletter-form-contact" data-access-key="YOUR_WEB3FORMS_KEY" novalidate>
-        <input type="hidden" name="botcheck" value="" style="display:none;">
+      <form class="newsletter-form" data-access-key="YOUR_WEB3FORMS_KEY" novalidate>
+        <input type="hidden" name="botcheck" value="" style="display:none">
         <input type="text" name="name" placeholder="Name" required autocomplete="given-name">
         <input type="email" name="email" placeholder="Email" required autocomplete="email">
         <button type="submit" class="btn btn-primary">Sign Up</button>
       </form>
     </div>
-    <img src="assets/images/lazy-oyster-mascot-couch.png" alt="" aria-hidden="true" class="newsletter__mascot" loading="lazy">
+    <img src="assets/logos/logo-mascot.webp" alt="" aria-hidden="true" class="newsletter__mascot" loading="lazy">
   </section>
 
 </main>
-
 <footer class="footer" role="contentinfo">
-  <div class="footer__inner">
-    <p class="footer__copy">Copyright &copy; 2025 TheLazyOyster.com</p>
-    <nav class="footer__links" aria-label="Footer navigation"><a href="privacy.html">Privacy Policy</a><a href="accessibility.html">Accessibility</a></nav>
-  </div>
+  <p class="footer__copy">Copyright &copy; 2025 TheLazyOyster.com</p>
+  <nav class="footer__links" aria-label="Footer links"><a href="privacy.html">Privacy Policy</a><a href="accessibility.html">Accessibility</a></nav>
 </footer>
 <script src="js/a11y-consent.js" defer></script>
 <script src="js/main.js" defer></script>

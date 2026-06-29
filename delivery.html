@@ -17,149 +17,153 @@
 <header role="banner">
   <nav class="navbar" aria-label="Main navigation">
     <div class="navbar__inner">
-      <a href="index.html" class="navbar__logo" aria-label="The Lazy Oyster - Home"><img src="assets/logos/logo-horizontal.png" alt="The Lazy Oyster" width="180" height="54"></a>
+      <a href="index.html" class="navbar__logo" aria-label="The Lazy Oyster - Home">
+        <img src="assets/logos/logo-horizontal.png" alt="The Lazy Oyster" width="170" height="52">
+      </a>
       <ul class="navbar__links" role="list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="delivery.html" class="active">Delivery</a></li>
-        <li><a href="events-catering.html">Events &amp; Catering</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html" data-page="index">Home</a></li>
+        <li><a href="about.html" data-page="about">About</a></li>
+        <li><a href="delivery.html" data-page="delivery">Delivery</a></li>
+        <li><a href="events-catering.html" data-page="events">Events &amp; Catering</a></li>
+        <li><a href="faq.html" data-page="faq">FAQ</a></li>
+        <li><a href="contact.html" data-page="contact">Contact</a></li>
       </ul>
-      <div class="navbar__cta">
-        <a href="tel:3059050257" class="navbar__icon" aria-label="Call (305) 905-0257"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.08 1.18 2 2 0 012.07 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.41-.41a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></a>
-        <a href="https://www.orderthelazyoyster.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Order Now</a>
-        <button class="navbar__hamburger" id="hamburger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+      <div class="navbar__right">
+        <a href="mailto:StayLazy@TheLazyOyster.com" class="navbar__icon-btn" aria-label="Email us">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+        <a href="tel:3059050257" class="navbar__icon-btn" aria-label="Call (305) 905-0257">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.08 1.18 2 2 0 012.07 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.41-.41a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        </a>
+        <a href="https://www.orderthelazyoyster.com" target="_blank" rel="noopener noreferrer" class="navbar__order">Order Now</a>
+        <button class="navbar__hamburger" id="hamburger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
       </div>
     </div>
     <div class="navbar__mobile" id="mobile-nav" role="navigation" aria-label="Mobile navigation">
-      <a href="index.html">Home</a><a href="about.html">About</a><a href="delivery.html">Delivery</a><a href="events-catering.html">Events &amp; Catering</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a>
-      <a href="https://www.orderthelazyoyster.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Order Now</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="delivery.html">Delivery</a>
+      <a href="events-catering.html">Events &amp; Catering</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://www.orderthelazyoyster.com" target="_blank" rel="noopener noreferrer" class="navbar__order">Order Now</a>
     </div>
   </nav>
 </header>
-
 <main id="main-content">
 
-  <!-- PAGE HERO -->
-  <section class="page-hero" aria-labelledby="delivery-hero-title">
-    <div class="page-hero__media">
-      <img src="assets/images/lazy-oyster-ceviche-miami.webp" alt="Fresh ceviche with colorful vegetables from The Lazy Oyster" width="1600" height="700" loading="eager" fetchpriority="high">
-      <div class="page-hero__overlay" aria-hidden="true"></div>
-    </div>
-    <div class="page-hero__content">
-      <span class="eyebrow eyebrow--yellow">Convenient Pickup &amp; Delivery</span>
-      <h1 id="delivery-hero-title">Fresh Oysters,<br>Your Way.</h1>
-      <p>Order online for delivery to your door or pickup at our Miami location. Available Wednesday through Sunday.</p>
-    </div>
-  </section>
+  <!-- HERO — ceviche photo matching original delivery page -->
+  <div class="page-hero">
+    <img src="assets/images/ceviche-hero.webp"
+         alt="Fresh ceviche with colorful vegetables and citrus from The Lazy Oyster"
+         width="1600" height="600" loading="eager" fetchpriority="high">
+    <div class="page-hero__overlay" aria-hidden="true"></div>
+  </div>
 
   <!-- STEP 1 -->
-  <article class="delivery-step" aria-labelledby="step1-heading">
-    <div class="delivery-step__img fade-up">
-      <img src="assets/images/lazy-oyster-lobster-roll-closeup.webp"
-           alt="Premium lobster roll and oysters on a serving board" width="700" height="420" loading="lazy">
-    </div>
-    <div class="delivery-step__text fade-up">
+  <div class="delivery-step" aria-labelledby="step1">
+    <div class="delivery-step__body fade-up">
       <span class="delivery-step__num">Step 1</span>
-      <h2 id="step1-heading">Place Your Order</h2>
+      <h2 id="step1">Place Your Order</h2>
       <p>Select from our premium oyster options, including fresh oysters (shucked or unshucked) and mouthwatering lobster rolls. Add your favorite sauces and extras to customize your order.</p>
-      <a href="https://www.orderthelazyoyster.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark mt-24">Checkout the Menu &rarr;</a>
+      <a href="https://www.orderthelazyoyster.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline-teal mt-24">Checkout the Menu &rarr;</a>
     </div>
-  </article>
+    <div class="delivery-step__img fade-up">
+      <img src="assets/images/lobster-roll-table.webp"
+           alt="Lobster rolls and oysters on a serving board with sauces and lemon"
+           width="680" height="420" loading="lazy">
+    </div>
+  </div>
 
-  <!-- STEP 2 -->
-  <div class="band" aria-labelledby="step2-heading">
+  <!-- STEP 2 — band -->
+  <div class="band" aria-labelledby="step2">
     <div class="band__bg" style="background-image:url('assets/images/oyster-raw-bar-catering-setup.webp');" aria-hidden="true"></div>
     <div class="band__overlay" aria-hidden="true"></div>
-    <div class="band__content" style="text-align:left;max-width:640px;">
-      <span class="eyebrow eyebrow--yellow">Step 2</span>
-      <h2 id="step2-heading">Schedule Your Delivery or Pickup</h2>
+    <div class="band__content">
+      <span class="eyebrow" style="color:var(--yellow)">Step 2</span>
+      <h2 id="step2">Schedule Your Delivery or Pickup</h2>
       <p>Decide whether you&rsquo;d like your seafood delivered to your doorstep or if you&rsquo;d prefer to pick it up yourself. During checkout, choose the date and time that works best for you.</p>
     </div>
   </div>
 
   <!-- STEP 3 -->
-  <article class="delivery-step reverse" aria-labelledby="step3-heading">
-    <div class="delivery-step__img fade-up">
-      <img src="assets/images/lazy-oyster-raw-bar-oysters-miami.webp"
-           alt="Fresh shucked oysters on ice ready for delivery" width="700" height="420" loading="lazy">
-    </div>
-    <div class="delivery-step__text fade-up">
+  <div class="delivery-step delivery-step--alt" aria-labelledby="step3">
+    <div class="delivery-step__body fade-up">
       <span class="delivery-step__num">Step 3</span>
-      <h2 id="step3-heading">Expert Preparation</h2>
-      <p><strong>Shucked Oysters:</strong> Our skilled shuckers prepare your oysters just before delivery or pickup. Served on an iced aluminum tray with sauces, lemon wedges, and the top shells to keep the oyster liquor intact.</p>
+      <h2 id="step3">Expert Preparation</h2>
+      <p><strong>Shucked Oysters:</strong> Our skilled shuckers will prepare your oysters just before delivery or pickup. They&rsquo;ll be served on an iced aluminum tray with sauces, lemon wedges, and the top shells to keep the oyster liquor intact.</p>
       <p style="margin-top:10px;"><strong>Unshucked Oysters:</strong> Prefer to shuck them yourself? Your unshucked oysters will be packed fresh, ready for you to enjoy on your schedule.</p>
     </div>
-  </article>
-
-  <!-- STEP 4 -->
-  <div class="band" aria-labelledby="step4-heading">
-    <div class="band__bg" style="background-image:url('assets/images/lazy-oyster-chargrilled-oyster-kit.webp');" aria-hidden="true"></div>
-    <div class="band__overlay" aria-hidden="true"></div>
-    <div class="band__content" style="text-align:left;max-width:640px;">
-      <span class="eyebrow eyebrow--yellow">Step 4</span>
-      <h2 id="step4-heading">Savor the Experience</h2>
-      <p>Whether it&rsquo;s a cozy night in or a special gathering, your oysters and lobster rolls arrive fresh, delicious, and ready to enjoy. From expertly shucked oysters to indulgent lobster rolls, we bring the taste of the sea to you!</p>
-      <a href="https://www.orderthelazyoyster.com" target="_blank" rel="noopener noreferrer" class="btn btn-yellow">Schedule Your Delivery &rarr;</a>
+    <div class="delivery-step__img fade-up">
+      <img src="assets/images/lazy-oyster-raw-bar-oysters-miami.webp"
+           alt="Fresh shucked oysters on ice ready for delivery"
+           width="680" height="420" loading="lazy">
     </div>
   </div>
 
-  <!-- FAQ PREVIEW -->
-  <section class="section" aria-labelledby="delivery-faq-heading" style="background:var(--white);">
-    <div style="text-align:center;margin-bottom:36px;">
-      <span class="eyebrow" style="justify-content:center;">Common Questions</span>
-      <h2 id="delivery-faq-heading">How does delivery work?</h2>
+  <!-- STEP 4 — band -->
+  <div class="band" aria-labelledby="step4">
+    <div class="band__bg" style="background-image:url('assets/images/catering-setup.webp');" aria-hidden="true"></div>
+    <div class="band__overlay" aria-hidden="true"></div>
+    <div class="band__content">
+      <span class="eyebrow" style="color:var(--yellow)">Step 4</span>
+      <h2 id="step4">Savor the Experience</h2>
+      <p>Whether it&rsquo;s a cozy night in or a special gathering, your oysters and lobster rolls arrive fresh, delicious, and ready to enjoy. From expertly shucked oysters to indulgent lobster rolls, we bring the taste of the sea to you!</p>
+      <a href="https://www.orderthelazyoyster.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Schedule Your Delivery &rarr;</a>
     </div>
-    <div class="faq-grid">
-      <div class="faq-item featured open">
-        <button class="faq-q featured-q" aria-expanded="true">
-          How do I place an order?
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-a">Simply browse our menu, choose your oysters (shucked or unshucked) and lobster rolls, add sauces or extras, and select delivery or pickup at checkout.</div>
+  </div>
+
+  <!-- LOBSTER ROLLS SPOTLIGHT -->
+  <div style="background:var(--off-white);padding:clamp(48px,7vw,80px) var(--pad-x);">
+    <div style="max-width:var(--max-w);margin:0 auto;text-align:center;margin-bottom:40px;">
+      <span class="eyebrow" style="display:block;text-align:center;">Miami&rsquo;s Famous</span>
+      <h2>Lobster Rolls</h2>
+    </div>
+    <div style="max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,64px);align-items:center;">
+      <div style="border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sh-lg);" class="fade-up">
+        <img src="assets/images/lazy-oyster-lobster-roll-closeup.webp"
+             alt="Miami lobster rolls from The Lazy Oyster"
+             width="680" height="460" loading="lazy" style="width:100%;height:380px;object-fit:cover;display:block;">
       </div>
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">Can I pre-order?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
-        <div class="faq-a">Yes! We recommend pre-ordering to ensure availability and guarantee your preferred time slot. Orders can be placed online or via Instagram DM.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">How does delivery or pickup work?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
-        <div class="faq-a">You can have seafood delivered directly to your doorstep or pick it up from our catering pickup location. During checkout, choose the date and time that works for you.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">Can I customize my order?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
-        <div class="faq-a">Absolutely! You can mix and match oyster varieties, add sauces, extras, and customize your lobster roll toppings at checkout.</div>
+      <div class="fade-up" style="display:flex;flex-direction:column;gap:20px;">
+        <div>
+          <h4>Indulge in Luxury</h4>
+          <p>Our lobster rolls are a culinary masterpiece, featuring succulent lobster meat seasoned to perfection and served in a buttery, toasted roll. Every bite is a taste of indulgence, perfect for elevating any occasion.</p>
+        </div>
+        <div>
+          <h4>Fresh, Flavorful, Unforgettable</h4>
+          <p>Crafted with the freshest lobster and our secret blend of seasonings, our lobster rolls offer an unforgettable seafood experience. Perfect for events or a special treat, they are a delicious way to impress your guests.</p>
+        </div>
+        <div>
+          <h4>Elevate Your Dining Experience</h4>
+          <p>Made with premium lobster and served in a perfectly toasted roll, they are the ultimate choice for any celebration, bringing a touch of elegance and flavor to your table.</p>
+        </div>
+        <a href="https://www.orderthelazyoyster.com/?item=290#5SFU5SU343CYXHFCDRIEVU4I" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="align-self:flex-start;">Order Now &rarr;</a>
       </div>
     </div>
-    <div style="text-align:center;margin-top:36px;">
-      <a href="faq.html" class="btn btn-outline-dark">View All FAQs</a>
-    </div>
-  </section>
+  </div>
 
   <!-- NEWSLETTER -->
-  <section class="newsletter" aria-labelledby="newsletter-heading-delivery">
+  <section class="newsletter" aria-labelledby="newsletter-delivery">
     <div class="newsletter__inner">
-      <span class="eyebrow" style="justify-content:center;">Stay in the Loop</span>
-      <h2 id="newsletter-heading-delivery">Sign up for our newsletter!</h2>
-      <p>Get first access to new menu items, pop-up dates, and exclusive delivery deals.</p>
-      <form class="newsletter-form" id="newsletter-form-delivery" data-access-key="YOUR_WEB3FORMS_KEY" novalidate>
-        <input type="hidden" name="botcheck" value="" style="display:none;">
+      <h2 id="newsletter-delivery">Sign up for our newsletter!</h2>
+      <p>Get first access to pop-up dates, new menu drops, and exclusive delivery deals.</p>
+      <form class="newsletter-form" data-access-key="YOUR_WEB3FORMS_KEY" novalidate>
+        <input type="hidden" name="botcheck" value="" style="display:none">
         <input type="text" name="name" placeholder="Name" required autocomplete="given-name">
         <input type="email" name="email" placeholder="Email" required autocomplete="email">
         <button type="submit" class="btn btn-primary">Sign Up</button>
       </form>
     </div>
-    <img src="assets/images/lazy-oyster-mascot-couch.png" alt="" aria-hidden="true" class="newsletter__mascot" loading="lazy">
+    <img src="assets/logos/logo-mascot.webp" alt="" aria-hidden="true" class="newsletter__mascot" loading="lazy">
   </section>
 
 </main>
-
 <footer class="footer" role="contentinfo">
-  <div class="footer__inner">
-    <p class="footer__copy">Copyright &copy; 2025 TheLazyOyster.com</p>
-    <nav class="footer__links" aria-label="Footer navigation"><a href="privacy.html">Privacy Policy</a><a href="accessibility.html">Accessibility</a></nav>
-  </div>
+  <p class="footer__copy">Copyright &copy; 2025 TheLazyOyster.com</p>
+  <nav class="footer__links" aria-label="Footer links"><a href="privacy.html">Privacy Policy</a><a href="accessibility.html">Accessibility</a></nav>
 </footer>
 <script src="js/a11y-consent.js" defer></script>
 <script src="js/main.js" defer></script>
