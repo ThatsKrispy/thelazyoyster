@@ -1,34 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Accessibility Statement | The Lazy Oyster</title>
-  <meta name="robots" content="noindex">
+  <meta name="description" content="Accessibility statement for The Lazy Oyster website.">
+  <meta name="robots" content="noindex, follow">
   <link rel="icon" href="assets/logos/favicon.jpeg" type="image/jpeg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to main content</a>
-<header role="banner"><nav class="navbar" aria-label="Main navigation"><div class="navbar__inner"><a href="index.html" class="navbar__logo"><img src="assets/logos/logo-horizontal.webp" alt="The Lazy Oyster" width="180" height="52"></a><ul class="navbar__links" role="list"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="delivery.html">Delivery</a></li><li><a href="events-catering.html">Events &amp; Catering</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li></ul><div class="navbar__actions"><a href="https://www.orderthelazyoyster.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Order Now</a></div></div></nav></header>
+<header role="banner"><nav class="navbar" aria-label="Main navigation"><div class="navbar__inner"><a href="index.html" class="navbar__logo" aria-label="The Lazy Oyster – Home"><img src="assets/logos/logo-horizontal.png" alt="The Lazy Oyster" width="180" height="54"></a><ul class="navbar__links" role="list"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="delivery.html">Delivery</a></li><li><a href="events-catering.html">Events &amp; Catering</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li></ul><div class="navbar__cta"><a href="https://www.orderthelazyoyster.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Order Now</a><button class="navbar__hamburger" id="hamburger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button></div></div><div class="navbar__mobile" id="mobile-nav" role="navigation" aria-label="Mobile navigation"><a href="index.html">Home</a><a href="about.html">About</a><a href="delivery.html">Delivery</a><a href="events-catering.html">Events &amp; Catering</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a><a href="https://www.orderthelazyoyster.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Order Now</a></div></nav></header>
 <main id="main-content">
-  <section class="section" style="max-width:780px;margin:0 auto;">
-    <h1>Accessibility Statement</h1>
-    <p><strong>thelazyoyster.com &mdash; Last updated: June 2025</strong></p>
-    <p>The Lazy Oyster is committed to ensuring digital accessibility for people with disabilities. We continually improve the user experience for everyone and apply relevant accessibility standards.</p>
-    <h2>Conformance Status</h2>
-    <p>We aim to conform to the Web Content Accessibility Guidelines (WCAG) 2.1, Level AA. This site is supplemented with an accessiBe AI-powered accessibility widget that provides additional tools for users with disabilities.</p>
-    <h2>Technical Specifications</h2>
-    <p>This website uses semantic HTML5, ARIA attributes, keyboard navigation support, sufficient color contrast ratios, alternative text for all meaningful images, and visible focus indicators.</p>
-    <h2>Feedback</h2>
-    <p>We welcome your feedback. If you experience any accessibility barriers, please contact us at <a href="mailto:StayLazy@TheLazyOyster.com" style="color:var(--teal);">StayLazy@TheLazyOyster.com</a> or call <a href="tel:3059050257" style="color:var(--teal);">(305) 905-0257</a>.</p>
+  <section class="section">
+    <div class="container">
+      <div class="prose-page">
+        <span class="eyebrow">Legal</span>
+        <h1 style="font-size:clamp(2rem,4vw,3rem);margin-bottom:48px;">Accessibility Statement</h1>
+        <p>The Lazy Oyster is committed to ensuring digital accessibility for people with disabilities. We continually improve the user experience for everyone and apply the relevant accessibility standards.</p>
+        <h2>Conformance Status</h2>
+        <p>We aim to conform to the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA. These guidelines explain how to make web content more accessible to people with disabilities.</p>
+        <h2>Measures We've Taken</h2>
+        <ul>
+          <li>Keyboard navigation support throughout the site</li>
+          <li>Skip navigation link at the top of every page</li>
+          <li>Descriptive alt text on all meaningful images</li>
+          <li>Sufficient color contrast ratios across text and backgrounds</li>
+          <li>ARIA labels and roles on interactive elements</li>
+          <li>Responsive design across all screen sizes and devices</li>
+          <li>Respects prefers-reduced-motion for users who prefer less animation</li>
+          <li>Focus indicators visible on all interactive elements</li>
+        </ul>
+        <h2>Known Limitations</h2>
+        <p>Some third-party content (including our ordering platform at orderthelazyoyster.com) may not fully conform to accessibility standards. We are not responsible for the accessibility of third-party services.</p>
+        <h2>Feedback &amp; Contact</h2>
+        <p>We welcome feedback on the accessibility of this website. If you experience accessibility barriers, please contact us:</p>
+        <ul>
+          <li>Email: <a href="mailto:StayLazy@TheLazyOyster.com" style="color:var(--teal);">StayLazy@TheLazyOyster.com</a></li>
+          <li>Phone: <a href="tel:3059050257" style="color:var(--teal);">(305) 905-0257</a></li>
+        </ul>
+        <p>We try to respond to accessibility feedback within 3 business days.</p>
+      </div>
+    </div>
   </section>
 </main>
-<footer class="footer" role="contentinfo"><div class="footer__bottom" style="max-width:var(--max-w);margin:0 auto;padding:24px 20px;"><p style="color:rgba(255,255,255,0.45);margin:0;">&copy; 2025 TheLazyOyster.com</p></div></footer>
-  <script src="js/consent.js"></script>
-  <script src="js/accessibility.js" defer></script>
-<script src="js/main.js" defer></script>
+<footer class="footer" role="contentinfo"><div class="footer__grid"><div><a href="index.html" aria-label="The Lazy Oyster – Home"><img src="assets/logos/logo-horizontal.png" class="footer__logo" alt="The Lazy Oyster" width="160" height="46" loading="lazy"></a><p class="footer__tagline">Miami's first traveling oyster bar.</p></div><div class="footer__col"><h5>Navigate</h5><a href="index.html">Home</a><a href="about.html">About</a><a href="delivery.html">Delivery</a><a href="events-catering.html">Events &amp; Catering</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></div><div class="footer__col"><h5>Legal</h5><a href="privacy.html">Privacy Policy</a><a href="accessibility.html">Accessibility</a></div><div class="footer__col"><h5>Contact</h5><div class="footer__contact-row"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:StayLazy@TheLazyOyster.com">StayLazy@TheLazyOyster.com</a></div></div></div><div class="footer__bottom"><span>&copy; <script>document.write(new Date().getFullYear())</script> The Lazy Oyster. All rights reserved.</span></div></footer>
+<script src="js/main.js"></script>
 </body>
 </html>
