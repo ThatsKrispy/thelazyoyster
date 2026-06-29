@@ -1,200 +1,145 @@
-/* ============================================================
-   THE LAZY OYSTER — Main JS
-   ThatsKrispy Build
-   ============================================================ */
-
+/* The Lazy Oyster — main.js · ThatsKrispy v4 */
 'use strict';
 
-/* === MOBILE NAV === */
-(function() {
-  const hamburger = document.getElementById('hamburger');
-  const mobileNav = document.getElementById('mobile-nav');
-  if (!hamburger || !mobileNav) return;
-
-  hamburger.addEventListener('click', function() {
-    const isOpen = mobileNav.classList.toggle('open');
-    hamburger.setAttribute('aria-expanded', isOpen);
-    hamburger.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+/* ── Mobile nav ─────────────────────────────────────────────── */
+(function(){
+  var btn = document.getElementById('burger');
+  var nav = document.getElementById('mob-nav');
+  if(!btn||!nav) return;
+  btn.addEventListener('click',function(){
+    var open = nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
   });
-
-  // Close on outside click
-  document.addEventListener('click', function(e) {
-    if (!hamburger.contains(e.target) && !mobileNav.contains(e.target)) {
-      mobileNav.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', 'false');
-      hamburger.setAttribute('aria-label', 'Open menu');
+  document.addEventListener('click',function(e){
+    if(!btn.contains(e.target)&&!nav.contains(e.target)){
+      nav.classList.remove('open');
+      btn.setAttribute('aria-expanded','false');
+      btn.setAttribute('aria-label','Open menu');
     }
   });
-
-  // Close on Escape
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && mobileNav.classList.contains('open')) {
-      mobileNav.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', 'false');
-      hamburger.focus();
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&nav.classList.contains('open')){
+      nav.classList.remove('open');
+      btn.setAttribute('aria-expanded','false');
+      btn.focus();
     }
   });
 })();
 
-/* === SCROLL FADE-IN ANIMATIONS === */
-(function() {
-  if (!window.IntersectionObserver) return;
-  const observer = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
-  document.querySelectorAll('.fade-in').forEach(function(el) {
-    observer.observe(el);
+/* ── Active nav link ────────────────────────────────────────── */
+(function(){
+  var path = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav__links a, .nav__mob a').forEach(function(a){
+    var href = a.getAttribute('href').split('/').pop() || 'index.html';
+    if(path===href) a.classList.add('act');
   });
 })();
 
-/* === ACTIVE NAV LINK === */
-(function() {
-  var path = window.location.pathname.replace(/\/$/, '') || '/index';
-  document.querySelectorAll('.navbar__links a, .navbar__mobile a').forEach(function(link) {
-    var href = link.getAttribute('href').replace(/\/$/, '') || '/index';
-    if (path === href || (href !== '/' && path.startsWith(href))) {
-      link.classList.add('active');
-    }
-  });
+/* ── Scroll fade-in ─────────────────────────────────────────── */
+(function(){
+  if(!window.IntersectionObserver) return;
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); }});
+  },{threshold:.1,rootMargin:'0px 0px -36px 0px'});
+  document.querySelectorAll('.fade').forEach(function(el){ io.observe(el); });
 })();
 
-/* === FAQ ACCORDION === */
-(function() {
-  document.querySelectorAll('.faq-btn').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      var answer = document.getElementById(btn.getAttribute('aria-controls'));
-      var isOpen = btn.getAttribute('aria-expanded') === 'true';
-
-      // Close all
-      document.querySelectorAll('.faq-btn').forEach(function(b) {
-        b.setAttribute('aria-expanded', 'false');
+/* ── FAQ accordion ──────────────────────────────────────────── */
+(function(){
+  document.querySelectorAll('.faq-q').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var ans = document.getElementById(btn.getAttribute('aria-controls'));
+      var open = btn.getAttribute('aria-expanded')==='true';
+      // close all
+      document.querySelectorAll('.faq-q').forEach(function(b){
+        b.setAttribute('aria-expanded','false');
         var a = document.getElementById(b.getAttribute('aria-controls'));
-        if (a) a.classList.remove('open');
+        if(a) a.classList.remove('open');
       });
-
-      // Toggle clicked
-      if (!isOpen) {
-        btn.setAttribute('aria-expanded', 'true');
-        if (answer) answer.classList.add('open');
-      }
+      if(!open){ btn.setAttribute('aria-expanded','true'); if(ans) ans.classList.add('open'); }
     });
   });
 })();
 
-/* === CATERING FORM — Web3Forms (free, no backend) === */
-(function() {
-  var form = document.getElementById('catering-form');
-  if (!form) return;
-
-  form.addEventListener('submit', function(e) {
+/* ── Catering form (Web3Forms) ──────────────────────────────── */
+(function(){
+  var form = document.getElementById('cat-form');
+  if(!form) return;
+  form.addEventListener('submit',function(e){
     e.preventDefault();
-    var statusEl = document.getElementById('form-status');
-    var submitBtn = form.querySelector('.form-submit');
-    var originalText = submitBtn.textContent;
+    var msg = document.getElementById('form-msg');
+    var sbm = form.querySelector('.form-submit');
+    var orig = sbm.textContent;
+    sbm.textContent='Sending…'; sbm.disabled=true;
+    msg.className='form-msg';
 
-    submitBtn.textContent = 'Sending…';
-    submitBtn.disabled = true;
-    statusEl.className = 'form-status';
-    statusEl.textContent = '';
-
-    var formData = new FormData(form);
-    var data = {};
-    formData.forEach(function(val, key) { data[key] = val; });
-
-    // Build a nicely formatted message for the email
-    var body = [
-      'NEW CATERING INQUIRY — The Lazy Oyster',
-      '---',
-      'Name: ' + (data.first_name || '') + ' ' + (data.last_name || ''),
-      'Email: ' + (data.email || ''),
-      'Phone: ' + (data.phone || ''),
-      'Event Address: ' + (data.event_address || ''),
-      'Event Date: ' + (data.event_date || ''),
-      'Event Time: ' + (data.event_time || ''),
-      'Guest Count: ' + (data.guest_count || ''),
-      'Celebration: ' + (data.celebration || ''),
+    var d={};
+    new FormData(form).forEach(function(v,k){ d[k]=v; });
+    var body=[
+      'NEW CATERING INQUIRY — The Lazy Oyster','---',
+      'Name: '+d.first_name+' '+d.last_name,
+      'Email: '+d.email,'Phone: '+d.phone,
+      'Event Address: '+d.event_address,
+      'Date: '+d.event_date,' Time: '+d.event_time,
+      'Guests: '+d.guest_count,
+      'Occasion: '+d.celebration
     ].join('\n');
 
-    fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify({
-        access_key: form.dataset.accessKey,
-        subject: 'New Catering Inquiry – ' + (data.first_name || '') + ' ' + (data.last_name || ''),
-        from_name: 'The Lazy Oyster Website',
-        message: body,
-        email: data.email,
-        name: data.first_name + ' ' + data.last_name,
-        replyto: data.email,
-        botcheck: data.botcheck || ''
+    fetch('https://api.web3forms.com/submit',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify({
+        access_key:form.dataset.accessKey,
+        subject:'New Catering Inquiry – '+d.first_name+' '+d.last_name,
+        from_name:'The Lazy Oyster Website',
+        message:body, email:d.email,
+        name:d.first_name+' '+d.last_name,
+        replyto:d.email, botcheck:d.botcheck||''
       })
     })
-    .then(function(res) { return res.json(); })
-    .then(function(result) {
-      submitBtn.textContent = originalText;
-      submitBtn.disabled = false;
-      if (result.success) {
-        statusEl.className = 'form-status success';
-        statusEl.textContent = '✓ Thank you! We\'ll get back to you within 24 hours to confirm your date.';
+    .then(function(r){return r.json();})
+    .then(function(r){
+      sbm.textContent=orig; sbm.disabled=false;
+      if(r.success){
+        msg.className='form-msg ok';
+        msg.textContent='✓ Sent! We\'ll get back to you within 24 hours to confirm your date.';
         form.reset();
-      } else {
-        throw new Error(result.message || 'Submission failed');
-      }
+      } else throw new Error();
     })
-    .catch(function(err) {
-      submitBtn.textContent = originalText;
-      submitBtn.disabled = false;
-      statusEl.className = 'form-status error';
-      statusEl.textContent = 'Something went wrong. Please call us at (305) 905-0257 or email StayLazy@TheLazyOyster.com';
+    .catch(function(){
+      sbm.textContent=orig; sbm.disabled=false;
+      msg.className='form-msg err';
+      msg.textContent='Something went wrong — call (305) 905-0257 or email StayLazy@TheLazyOyster.com';
     });
   });
 })();
 
-/* === NEWSLETTER FORM === */
-(function() {
-  var forms = document.querySelectorAll('.newsletter-form');
-  forms.forEach(function(form) {
-    form.addEventListener('submit', function(e) {
+/* ── Newsletter forms ───────────────────────────────────────── */
+(function(){
+  document.querySelectorAll('.nl-form').forEach(function(form){
+    form.addEventListener('submit',function(e){
       e.preventDefault();
-      var btn = form.querySelector('button');
-      var emailInput = form.querySelector('input[type="email"]');
-      var nameInput = form.querySelector('input[name="name"]');
-
-      btn.textContent = 'Subscribing…';
-      btn.disabled = true;
-
-      fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify({
-          access_key: form.dataset.accessKey,
-          subject: 'New Newsletter Signup — The Lazy Oyster',
-          from_name: 'The Lazy Oyster Website',
-          name: nameInput ? nameInput.value : '',
-          email: emailInput ? emailInput.value : '',
-          message: 'Newsletter signup from ' + (nameInput ? nameInput.value : '') + ' — ' + (emailInput ? emailInput.value : '')
+      var btn=form.querySelector('button');
+      btn.textContent='Subscribing…'; btn.disabled=true;
+      var d={}; new FormData(form).forEach(function(v,k){d[k]=v;});
+      fetch('https://api.web3forms.com/submit',{
+        method:'POST',
+        headers:{'Content-Type':'application/json','Accept':'application/json'},
+        body:JSON.stringify({
+          access_key:form.dataset.accessKey,
+          subject:'Newsletter Signup — The Lazy Oyster',
+          from_name:'The Lazy Oyster Website',
+          name:d.name||'', email:d.email||'',
+          message:'Newsletter signup: '+d.name+' · '+d.email
         })
       })
-      .then(function(r) { return r.json(); })
-      .then(function(res) {
-        if (res.success) {
-          btn.textContent = '✓ You\'re in!';
-          form.reset();
-        } else {
-          btn.textContent = 'Try again';
-          btn.disabled = false;
-        }
+      .then(function(r){return r.json();})
+      .then(function(r){
+        if(r.success){ btn.textContent='✓ You\'re in!'; form.reset(); }
+        else{ btn.textContent='Try again'; btn.disabled=false; }
       })
-      .catch(function() {
-        btn.textContent = 'Try again';
-        btn.disabled = false;
-      });
+      .catch(function(){ btn.textContent='Try again'; btn.disabled=false; });
     });
   });
 })();
