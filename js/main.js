@@ -1,9 +1,9 @@
 /* ============================================================
-   THE LAZY OYSTER — v2 Main JS  |  ThatsKrispy
+   THE LAZY OYSTER - v2 Main JS  |  ThatsKrispy
    ============================================================ */
 'use strict';
 
-/* ── NAVBAR SCROLL SHADOW ────────────────────────────────── */
+/* -- NAVBAR SCROLL SHADOW ---------------------------------- */
 (function() {
   var nav = document.querySelector('.navbar');
   if (!nav) return;
@@ -19,14 +19,14 @@
   });
 })();
 
-/* ── HERO LOAD ANIMATION ─────────────────────────────────── */
+/* -- HERO LOAD ANIMATION ----------------------------------- */
 (function() {
   var hero = document.querySelector('.hero');
   if (!hero) return;
   setTimeout(function() { hero.classList.add('loaded'); }, 60);
 })();
 
-/* ── MOBILE NAV ──────────────────────────────────────────── */
+/* -- MOBILE NAV -------------------------------------------- */
 (function() {
   var btn = document.getElementById('hamburger');
   var nav = document.getElementById('mobile-nav');
@@ -52,7 +52,7 @@
   });
 })();
 
-/* ── ACTIVE NAV LINK ─────────────────────────────────────── */
+/* -- ACTIVE NAV LINK --------------------------------------- */
 (function() {
   var path = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.navbar__links a, .navbar__mobile a').forEach(function(a) {
@@ -61,7 +61,7 @@
   });
 })();
 
-/* ── SCROLL FADE-UP ──────────────────────────────────────── */
+/* -- SCROLL FADE-UP ---------------------------------------- */
 (function() {
   if (!window.IntersectionObserver) {
     document.querySelectorAll('.fade-up').forEach(function(el) { el.classList.add('visible'); });
@@ -75,7 +75,7 @@
   document.querySelectorAll('.fade-up').forEach(function(el) { io.observe(el); });
 })();
 
-/* ── FAQ ACCORDION ───────────────────────────────────────── */
+/* -- FAQ ACCORDION ----------------------------------------- */
 (function() {
   document.querySelectorAll('.faq-btn').forEach(function(btn) {
     btn.addEventListener('click', function() {
@@ -94,7 +94,7 @@
   });
 })();
 
-/* ── CATERING FORM ───────────────────────────────────────── */
+/* -- CATERING FORM ----------------------------------------- */
 (function() {
   var form = document.getElementById('catering-form');
   if (!form) return;
@@ -103,13 +103,13 @@
     var statusEl = document.getElementById('form-status');
     var submitBtn = form.querySelector('.form-submit');
     var originalText = submitBtn.textContent;
-    submitBtn.textContent = 'Sending…';
+    submitBtn.textContent = 'Sending...';
     submitBtn.disabled = true;
     statusEl.className = 'form-status';
     var data = {};
     new FormData(form).forEach(function(v, k) { data[k] = v; });
     var body = [
-      'NEW CATERING INQUIRY — The Lazy Oyster', '---',
+      'NEW CATERING INQUIRY - The Lazy Oyster', '---',
       'Name: ' + (data.first_name || '') + ' ' + (data.last_name || ''),
       'Email: ' + (data.email || ''), 'Phone: ' + (data.phone || ''),
       'Event Address: ' + (data.event_address || ''),
@@ -123,7 +123,7 @@
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({
         access_key: form.dataset.accessKey,
-        subject: 'New Catering Inquiry – ' + data.first_name + ' ' + data.last_name,
+        subject: 'New Catering Inquiry - ' + data.first_name + ' ' + data.last_name,
         from_name: 'The Lazy Oyster Website',
         message: body, email: data.email,
         name: data.first_name + ' ' + data.last_name,
@@ -136,7 +136,7 @@
       submitBtn.disabled = false;
       if (res.success) {
         statusEl.className = 'form-status success';
-        statusEl.textContent = '✓ Received! We\'ll be in touch within 24 hours to confirm your date.';
+        statusEl.textContent = 'Received! We\'ll be in touch within 24 hours to confirm your date.';
         form.reset();
       } else { throw new Error(res.message || 'Failed'); }
     })
@@ -149,14 +149,14 @@
   });
 })();
 
-/* ── NEWSLETTER FORM ─────────────────────────────────────── */
+/* -- NEWSLETTER FORM --------------------------------------- */
 (function() {
   document.querySelectorAll('.newsletter-form').forEach(function(form) {
     form.addEventListener('submit', function(e) {
       e.preventDefault();
       var btn = form.querySelector('button');
       var orig = btn.textContent;
-      btn.textContent = '…'; btn.disabled = true;
+      btn.textContent = '...'; btn.disabled = true;
       var data = {};
       new FormData(form).forEach(function(v, k) { data[k] = v; });
       fetch('https://api.web3forms.com/submit', {
@@ -164,7 +164,7 @@
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify({
           access_key: form.dataset.accessKey,
-          subject: 'Newsletter Sign-Up – The Lazy Oyster',
+          subject: 'Newsletter Sign-Up - The Lazy Oyster',
           from_name: 'The Lazy Oyster Website',
           message: 'New subscriber: ' + data.name + ' | ' + data.email,
           email: data.email, name: data.name,
@@ -172,7 +172,7 @@
       })
       .then(function(r) { return r.json(); })
       .then(function(res) {
-        btn.textContent = res.success ? '✓ You\'re in!' : orig;
+        btn.textContent = res.success ? 'You\'re in!' : orig;
         btn.disabled = false;
         if (res.success) form.reset();
       })
@@ -181,7 +181,7 @@
   });
 })();
 
-/* ── COOKIE CONSENT ──────────────────────────────────────── */
+/* -- COOKIE CONSENT ---------------------------------------- */
 (function() {
   var banner = document.getElementById('cookie-banner');
   if (!banner) return;
@@ -196,7 +196,7 @@
   if (decline) decline.addEventListener('click', function() { dismiss('declined'); });
 })();
 
-/* ── LOGO TICKER PAUSE ON HOVER ──────────────────────────── */
+/* -- LOGO TICKER PAUSE ON HOVER ---------------------------- */
 (function() {
   var track = document.querySelector('.ticker-track');
   if (!track) return;

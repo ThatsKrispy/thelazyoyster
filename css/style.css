@@ -1,10 +1,11 @@
+@charset "utf-8";
 /* ============================================================
-   THE LAZY OYSTER — v2 Rebuild  |  ThatsKrispy
+   THE LAZY OYSTER - v2 Rebuild  |  ThatsKrispy
    Brand: Deep Navy #0d1b2a | Teal #3AB5C2 | Gold #E8A020
    Fonts: Cormorant Garamond (display) + DM Sans (body)
    ============================================================ */
 
-/* ── RESET ───────────────────────────────────────────────── */
+/* -- RESET ------------------------------------------------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; font-size: 16px; -webkit-font-smoothing: antialiased; }
 body {
@@ -20,7 +21,7 @@ a { color: inherit; text-decoration: none; }
 ul, ol { list-style: none; }
 button { font-family: inherit; }
 
-/* ── TOKENS ──────────────────────────────────────────────── */
+/* -- TOKENS ------------------------------------------------ */
 :root {
   --teal:        #3AB5C2;
   --teal-dark:   #2a919b;
@@ -49,7 +50,7 @@ button { font-family: inherit; }
   --section-y:   clamp(72px, 9vw, 120px);
 }
 
-/* ── TYPOGRAPHY ──────────────────────────────────────────── */
+/* -- TYPOGRAPHY -------------------------------------------- */
 h1, h2, h3, h4 {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 700;
@@ -83,12 +84,12 @@ p  { color: var(--gray-700); font-size: 1.05rem; }
   flex-shrink: 0;
 }
 
-/* ── LAYOUT ──────────────────────────────────────────────── */
+/* -- LAYOUT ------------------------------------------------ */
 .container { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--pad-x); }
 .section    { padding: var(--section-y) var(--pad-x); }
 .text-center { text-align: center; }
 
-/* ── BUTTONS ─────────────────────────────────────────────── */
+/* -- BUTTONS ----------------------------------------------- */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -122,7 +123,7 @@ p  { color: var(--gray-700); font-size: 1.05rem; }
 
 :focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
 
-/* ── ADA SKIP LINK ───────────────────────────────────────── */
+/* -- ADA SKIP LINK ----------------------------------------- */
 .skip-link {
   position: absolute; top: -100%; left: 20px;
   background: var(--teal); color: white;
@@ -137,7 +138,7 @@ p  { color: var(--gray-700); font-size: 1.05rem; }
   clip: rect(0,0,0,0); white-space: nowrap; border-width: 0;
 }
 
-/* ── NAVBAR ──────────────────────────────────────────────── */
+/* -- NAVBAR ------------------------------------------------ */
 .navbar {
   position: sticky; top: 0; z-index: 1000;
   background: rgba(255,255,255,0.97);
@@ -201,7 +202,7 @@ p  { color: var(--gray-700); font-size: 1.05rem; }
   margin-top: 20px; text-align: center; justify-content: center; width: 100%;
 }
 
-/* ── HERO ────────────────────────────────────────────────── */
+/* -- HERO -------------------------------------------------- */
 .hero {
   position: relative; height: clamp(520px, 75vh, 820px);
   overflow: hidden; display: flex; align-items: center;
@@ -242,7 +243,7 @@ p  { color: var(--gray-700); font-size: 1.05rem; }
   50% { transform: translateX(-50%) translateY(8px); }
 }
 
-/* ── PAGE HERO ───────────────────────────────────────────── */
+/* -- PAGE HERO --------------------------------------------- */
 .page-hero {
   position: relative; height: clamp(260px, 35vw, 400px); overflow: hidden;
 }
@@ -260,7 +261,7 @@ p  { color: var(--gray-700); font-size: 1.05rem; }
 .page-hero__overlay .eyebrow { justify-content: center; }
 .page-hero__overlay .eyebrow::before { background: var(--teal); }
 
-/* ── INTRO SPLIT ─────────────────────────────────────────── */
+/* -- INTRO SPLIT ------------------------------------------- */
 .intro-split {
   display: grid; grid-template-columns: 1fr 1fr;
   gap: 80px; align-items: center;
@@ -290,7 +291,7 @@ p  { color: var(--gray-700); font-size: 1.05rem; }
 .intro-split__text h2 { margin-bottom: 20px; }
 .intro-split__text p { margin-bottom: 16px; }
 
-/* ── PRODUCT GRID ────────────────────────────────────────── */
+/* -- PRODUCT GRID ------------------------------------------ */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -327,7 +328,7 @@ p  { color: var(--gray-700); font-size: 1.05rem; }
 }
 .product-card .btn { width: fit-content; padding: 10px 20px; font-size: 0.72rem; }
 
-/* ── DARK BAND (CTA) ─────────────────────────────────────── */
+/* -- DARK BAND (CTA) --------------------------------------- */
 .band {
   position: relative; overflow: hidden;
   padding: clamp(64px, 8vw, 100px) var(--pad-x);
@@ -347,7 +348,7 @@ p  { color: var(--gray-700); font-size: 1.05rem; }
 .band__content h2 { color: var(--white); margin-bottom: 18px; }
 .band__content p { color: rgba(255,255,255,0.78); margin-bottom: 32px; font-size: 1.05rem; }
 
-/* ── WHY SECTION ─────────────────────────────────────────── */
+/* -- WHY SECTION ------------------------------------------- */
 .why-split { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
 .why-lead h2 { margin-bottom: 20px; }
 .why-lead p { margin-bottom: 14px; }
@@ -366,7 +367,7 @@ p  { color: var(--gray-700); font-size: 1.05rem; }
 .why-point h4 { color: var(--navy); margin-bottom: 6px; }
 .why-point p { margin: 0; font-size: 0.95rem; }
 
-/* ── PARTNER LOGOS ───────────────────────────────────────── */
+/* -- PARTNER LOGOS ----------------------------------------- */
 .partner-logos {
   display: flex; flex-wrap: wrap; gap: 24px 32px;
   align-items: center; justify-content: center;
@@ -379,7 +380,7 @@ p  { color: var(--gray-700); font-size: 1.05rem; }
 }
 .partner-logos img:hover { filter: grayscale(0) opacity(1); transform: scale(1.05); }
 
-/* ── LOGO TICKER (marquee) ───────────────────────────────── */
+/* -- LOGO TICKER (marquee) --------------------------------- */
 .ticker-wrap { overflow: hidden; width: 100%; }
 .ticker-track {
   display: flex; gap: 48px; align-items: center;
@@ -389,7 +390,7 @@ p  { color: var(--gray-700); font-size: 1.05rem; }
 @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 @media (prefers-reduced-motion: reduce) { .ticker-track { animation: none; } }
 
-/* ── NEWSLETTER BAND ─────────────────────────────────────── */
+/* -- NEWSLETTER BAND --------------------------------------- */
 .newsletter-band {
   background: var(--cream); padding: clamp(56px, 7vw, 88px) var(--pad-x);
   position: relative; overflow: hidden;
@@ -419,7 +420,7 @@ p  { color: var(--gray-700); font-size: 1.05rem; }
   box-shadow: 0 0 0 3px rgba(58,181,194,0.15);
 }
 
-/* ── FOOTER ──────────────────────────────────────────────── */
+/* -- FOOTER ------------------------------------------------ */
 .footer { background: var(--navy); color: rgba(255,255,255,0.65); padding: 72px var(--pad-x) 32px; }
 .footer__grid {
   max-width: var(--max-w); margin: 0 auto;
@@ -460,7 +461,7 @@ p  { color: var(--gray-700); font-size: 1.05rem; }
 .footer__bottom a { color: rgba(255,255,255,0.45); transition: color var(--ease); }
 .footer__bottom a:hover { color: var(--teal); }
 
-/* ── STATS BAR ───────────────────────────────────────────── */
+/* -- STATS BAR --------------------------------------------- */
 .stats-bar {
   background: var(--navy); padding: 0 var(--pad-x);
 }
@@ -482,7 +483,7 @@ p  { color: var(--gray-700); font-size: 1.05rem; }
 }
 .stat__label { font-size: 0.8rem; color: rgba(255,255,255,0.55); text-transform: uppercase; letter-spacing: 0.12em; }
 
-/* ── DELIVERY STEPS ──────────────────────────────────────── */
+/* -- DELIVERY STEPS ---------------------------------------- */
 .steps { display: flex; flex-direction: column; gap: 0; }
 .step {
   display: grid; grid-template-columns: 1fr 1fr;
@@ -503,7 +504,7 @@ p  { color: var(--gray-700); font-size: 1.05rem; }
 .step__text h3 { margin-bottom: 16px; }
 .step__text p { margin-bottom: 14px; }
 
-/* ── CATERING PACKAGES ───────────────────────────────────── */
+/* -- CATERING PACKAGES ------------------------------------- */
 .pkg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
 .pkg-card {
   background: white; border: 1px solid var(--gray-200);
@@ -532,9 +533,9 @@ p  { color: var(--gray-700); font-size: 1.05rem; }
   display: flex; align-items: center; gap: 10px;
 }
 .pkg-card--featured .pkg-list li { border-bottom-color: rgba(255,255,255,0.12); }
-.pkg-list li::before { content: '✦'; color: var(--teal); font-size: 0.65rem; flex-shrink: 0; }
+.pkg-list li::before { content: '-'; color: var(--teal); font-size: 0.65rem; flex-shrink: 0; }
 
-/* ── CATERING FORM ───────────────────────────────────────── */
+/* -- CATERING FORM ----------------------------------------- */
 .form-wrap {
   background: white; border-radius: var(--r-lg);
   padding: 48px; box-shadow: var(--sh-xl);
@@ -575,7 +576,7 @@ p  { color: var(--gray-700); font-size: 1.05rem; }
 .form-status.success { display: block; background: #d1fae5; color: #065f46; border: 1px solid #a7f3d0; }
 .form-status.error   { display: block; background: #fee2e2; color: #991b1b; border: 1px solid #fca5a5; }
 
-/* ── FAQ ─────────────────────────────────────────────────── */
+/* -- FAQ --------------------------------------------------- */
 .faq-list { max-width: 780px; margin: 0 auto; }
 .faq-item { border-bottom: 1px solid var(--gray-200); }
 .faq-item:first-child { border-top: 1px solid var(--gray-200); }
@@ -595,7 +596,7 @@ p  { color: var(--gray-700); font-size: 1.05rem; }
 .faq-answer__inner { padding-bottom: 22px; }
 .faq-answer__inner p { color: var(--gray-700); font-size: 0.98rem; margin: 0; }
 
-/* ── CONTACT ─────────────────────────────────────────────── */
+/* -- CONTACT ----------------------------------------------- */
 .contact-split { display: grid; grid-template-columns: 1fr 1.4fr; gap: 72px; align-items: start; }
 .contact-cards { display: flex; flex-direction: column; gap: 16px; margin-bottom: 32px; }
 .contact-card {
@@ -617,7 +618,7 @@ p  { color: var(--gray-700); font-size: 1.05rem; }
 .contact-hours li { font-size: 0.95rem; color: var(--gray-700); padding: 8px 0; border-bottom: 1px solid var(--gray-200); display: flex; justify-content: space-between; }
 .contact-hours li:last-child { border-bottom: none; }
 
-/* ── ABOUT ───────────────────────────────────────────────── */
+/* -- ABOUT ------------------------------------------------- */
 .founders-card {
   background: var(--navy); border-radius: var(--r-lg);
   overflow: hidden; display: grid; grid-template-columns: 1fr 1.1fr;
@@ -641,14 +642,14 @@ p  { color: var(--gray-700); font-size: 1.05rem; }
 .value-card h4 { color: var(--navy); margin-bottom: 10px; }
 .value-card p { margin: 0; font-size: 0.95rem; }
 
-/* ── PRIVACY / ACCESSIBILITY ─────────────────────────────── */
+/* -- PRIVACY / ACCESSIBILITY ------------------------------- */
 .prose-page { max-width: 780px; margin: 0 auto; }
 .prose-page h2 { font-size: 1.8rem; margin: 40px 0 14px; color: var(--navy); }
 .prose-page h3 { font-size: 1.2rem; margin: 28px 0 10px; color: var(--navy); font-family: 'DM Sans', sans-serif; font-weight: 700; }
 .prose-page p, .prose-page li { color: var(--gray-700); font-size: 0.97rem; margin-bottom: 12px; }
 .prose-page ul { list-style: disc; padding-left: 24px; }
 
-/* ── COOKIE BANNER ───────────────────────────────────────── */
+/* -- COOKIE BANNER ----------------------------------------- */
 #cookie-banner {
   position: fixed; bottom: 0; left: 0; right: 0; z-index: 9990;
   background: var(--navy); color: rgba(255,255,255,0.85);
@@ -663,7 +664,7 @@ p  { color: var(--gray-700); font-size: 1.05rem; }
 #cookie-banner a { color: var(--teal); text-decoration: underline; }
 #cookie-banner button { padding: 9px 22px; font-size: 0.8rem; }
 
-/* ── ANIMATIONS ──────────────────────────────────────────── */
+/* -- ANIMATIONS -------------------------------------------- */
 .fade-up {
   opacity: 0; transform: translateY(28px);
   transition: opacity 0.6s cubic-bezier(0.4,0,0.2,1),
@@ -679,7 +680,7 @@ p  { color: var(--gray-700); font-size: 1.05rem; }
   .hero__bg { transition: none; }
 }
 
-/* ── UTILITY ─────────────────────────────────────────────── */
+/* -- UTILITY ----------------------------------------------- */
 .mt-4  { margin-top: 4px; }
 .mt-8  { margin-top: 8px; }
 .mt-16 { margin-top: 16px; }
@@ -691,7 +692,7 @@ p  { color: var(--gray-700); font-size: 1.05rem; }
 .mb-32 { margin-bottom: 32px; }
 .mb-48 { margin-bottom: 48px; }
 
-/* ── RESPONSIVE ──────────────────────────────────────────── */
+/* -- RESPONSIVE -------------------------------------------- */
 @media (max-width: 1024px) {
   .product-grid { grid-template-columns: repeat(2, 1fr); }
   .stats-bar__inner { grid-template-columns: repeat(2, 1fr); }
