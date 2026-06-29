@@ -143,3 +143,48 @@
     });
   });
 })();
+
+/* ── Legacy nav ID fallback (v3 pages use #hamburger / #mobile-nav) ── */
+(function(){
+  var btn = document.getElementById('hamburger');
+  var nav = document.getElementById('mobile-nav');
+  if(!btn||!nav) return; // already handled by v4 burger/mob-nav above
+  btn.addEventListener('click',function(){
+    var open = nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  });
+  document.addEventListener('click',function(e){
+    if(!btn.contains(e.target)&&!nav.contains(e.target)){
+      nav.classList.remove('open');
+      btn.setAttribute('aria-expanded','false');
+    }
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&nav.classList.contains('open')){
+      nav.classList.remove('open');
+      btn.setAttribute('aria-expanded','false');
+      btn.focus();
+    }
+  });
+})();
+
+/* ── Legacy FAQ class fallback (v3 uses .faq-btn) ── */
+(function(){
+  document.querySelectorAll('.faq-btn').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var ans = document.getElementById(btn.getAttribute('aria-controls'));
+      var open = btn.getAttribute('aria-expanded')==='true';
+      document.querySelectorAll('.faq-btn').forEach(function(b){
+        b.setAttribute('aria-expanded','false');
+        var a = document.getElementById(b.getAttribute('aria-controls'));
+        if(a) a.classList.remove('open');
+      });
+      if(!open){ btn.setAttribute('aria-expanded','true'); if(ans) ans.classList.add('open'); }
+    });
+  });
+  /* Legacy form ID fallback */
+  var form = document.getElementById('catering-form');
+  if(!form) return;
+  form.id = 'cat-form'; // alias
+})();
