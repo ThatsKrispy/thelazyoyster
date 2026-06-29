@@ -1020,8 +1020,7 @@ h2.script { font-size: clamp(1.7rem, 3.5vw, 2.6rem); color: var(--teal); }
 /* Product card btn: slightly smaller on 5-col */
 .product-grid .btn { font-size: 0.72rem; padding: 9px 16px; }
 
-/* Whitespace after product grid before next section */
-.product-grid-section { margin-bottom: clamp(48px, 6vw, 80px); }
+/* product-grid-section spacing handled by social-strip below it */
 
 /* Delivery step num labels: color fix for band context */
 .band .delivery-step__num { color: var(--yellow); }
@@ -1160,4 +1159,71 @@ h2.script { font-size: clamp(1.7rem, 3.5vw, 2.6rem); color: var(--teal); }
 @media (max-width: 560px) {
   .ticker-track img { height: 28px; }
   .ticker-track { gap: 36px; }
+}
+
+/* ============================================================
+   SOCIAL PROOF / INFO STRIP (home — between grid and delivery)
+   ============================================================ */
+.social-strip {
+  background: var(--teal);
+  padding: clamp(28px, 4vw, 44px) var(--pad-x);
+}
+.social-strip__inner {
+  max-width: var(--max-w); margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: clamp(24px, 4vw, 56px);
+  align-items: center;
+}
+.social-strip__label {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--yellow);
+  margin-bottom: 8px;
+}
+.social-strip__label svg { width: 15px; height: 15px; flex-shrink: 0; }
+.social-strip__copy {
+  color: rgba(255,255,255,0.88);
+  font-size: 0.95rem; margin: 0;
+  max-width: 36ch;
+}
+.social-strip__badges {
+  display: flex; gap: 20px; flex-shrink: 0;
+}
+.social-badge {
+  text-align: center;
+  padding: 12px 18px;
+  background: rgba(255,255,255,0.12);
+  border-radius: var(--r-md);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+.social-badge strong {
+  display: block;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.25rem; font-weight: 700;
+  color: #fff; line-height: 1;
+}
+.social-badge span {
+  display: block; margin-top: 4px;
+  font-size: 0.7rem; font-weight: 600;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  color: rgba(255,255,255,0.72);
+}
+.social-strip__cta { flex-shrink: 0; background: #fff; color: var(--teal); border-color: #fff; }
+.social-strip__cta:hover { background: var(--yellow); color: var(--text); border-color: var(--yellow); }
+
+@media (max-width: 900px) {
+  .social-strip__inner {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+  }
+  .social-strip__copy { max-width: 100%; }
+  .social-strip__label { justify-content: center; }
+  .social-strip__badges { justify-content: center; flex-wrap: wrap; }
+  .social-strip__cta { width: 100%; justify-content: center; max-width: 280px; margin: 0 auto; }
+}
+@media (max-width: 480px) {
+  .social-badge { padding: 10px 14px; }
+  .social-badge strong { font-size: 1.1rem; }
 }
