@@ -1261,3 +1261,6 @@ h2.script { font-size: clamp(1.7rem, 3.5vw, 2.6rem); color: var(--teal); }
   .social-badge { padding: 10px 14px; }
   .social-badge strong { font-size: 1.1rem; }
 }
+
+.footer__copy a { font-size: inherit; opacity: 0.6; }
+.footer__copy a:hover { opacity: 1; color: var(--teal); }
