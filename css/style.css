@@ -257,33 +257,60 @@ h2.script { font-size: clamp(1.7rem, 3.5vw, 2.6rem); color: var(--teal); }
 .hero.loaded .hero__img { transform: scale(1); }
 .hero__overlay {
   position: absolute; inset: 0;
-  /* Radial darken on left where text lives, plus top-to-bottom gradient */
+  /* Option A: strong left panel fade — text side dark, food side stays bright */
   background:
-    radial-gradient(ellipse 70% 100% at 0% 60%, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.10) 70%),
-    linear-gradient(to bottom, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.18) 50%, rgba(0,0,0,0.38) 100%);
+    linear-gradient(to right,
+      rgba(0,0,0,0.78) 0%,
+      rgba(0,0,0,0.62) 30%,
+      rgba(0,0,0,0.28) 55%,
+      rgba(0,0,0,0.04) 75%,
+      transparent 100%
+    ),
+    linear-gradient(to bottom,
+      rgba(0,0,0,0.22) 0%,
+      transparent 40%,
+      rgba(0,0,0,0.14) 100%
+    );
 }
 .hero__content {
   position: absolute; inset: 0;
   display: flex; flex-direction: column;
   justify-content: center; align-items: flex-start;
-  padding: 0 clamp(24px, 6vw, 80px);
+  /* Constrain text to left 55% so it stays in the dark zone */
+  padding: 0 clamp(24px, 6vw, 72px);
+  max-width: 56%;
 }
 .hero__content h1 {
   color: #fff;
   font-size: clamp(2rem, 5.5vw, 4rem);
   line-height: 1.05;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.55), 0 4px 20px rgba(0,0,0,0.45);
+  text-shadow: 0 2px 3px rgba(0,0,0,0.5);
   margin-bottom: 16px;
-  max-width: 14ch;
+  max-width: 100%;
 }
 .hero__content p {
-  color: rgba(255,255,255,0.9);
-  font-size: clamp(1rem, 1.6vw, 1.2rem);
-  max-width: 46ch;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.6), 0 2px 12px rgba(0,0,0,0.4);
+  color: rgba(255,255,255,0.92);
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  max-width: 100%;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.55);
   margin-bottom: 24px;
 }
 .hero__btns { display: flex; gap: 12px; flex-wrap: wrap; }
+/* Mobile: full-width content + stronger overlay since left-panel doesn't work narrow */
+@media (max-width: 600px) {
+  .hero__overlay {
+    background: linear-gradient(to bottom,
+      rgba(0,0,0,0.35) 0%,
+      rgba(0,0,0,0.22) 40%,
+      rgba(0,0,0,0.60) 100%
+    );
+  }
+  .hero__content {
+    max-width: 100%;
+    justify-content: flex-end;
+    padding-bottom: clamp(32px, 8vw, 64px);
+  }
+}
 
 /* Page-interior hero (short banner like original inner pages) */
 .page-hero {
