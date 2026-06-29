@@ -181,21 +181,6 @@
   });
 })();
 
-/* -- COOKIE CONSENT ---------------------------------------- */
-(function() {
-  var banner = document.getElementById('cookie-banner');
-  if (!banner) return;
-  if (!localStorage.getItem('tlo_cookie_consent')) banner.classList.add('show');
-  var accept = document.getElementById('cookie-accept');
-  var decline = document.getElementById('cookie-decline');
-  function dismiss(val) {
-    banner.classList.remove('show');
-    localStorage.setItem('tlo_cookie_consent', val);
-  }
-  if (accept)  accept.addEventListener('click',  function() { dismiss('accepted'); });
-  if (decline) decline.addEventListener('click', function() { dismiss('declined'); });
-})();
-
 /* -- LOGO TICKER PAUSE ON HOVER ---------------------------- */
 (function() {
   var track = document.querySelector('.ticker-track');
