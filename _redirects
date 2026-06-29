@@ -1,10 +1,7 @@
-/about                       /about.html                 301
-/about/                      /about.html                 301
-/contact                     /contact.html               301
-/contact/                    /contact.html               301
-/catering-private-events     /events-catering.html       301
-/catering-private-events/    /events-catering.html       301
-/deliver                     /delivery.html              301
-/deliver/                    /delivery.html              301
-/elementor-112               /faq.html                   301
-/elementor-112/              /faq.html                   301
+# Old WordPress URL mappings -> clean URLs (Cloudflare Pages serves .html as clean URLs automatically)
+/catering-private-events     /events-catering     301
+/catering-private-events/    /events-catering     301
+/deliver                     /delivery            301
+/deliver/                    /delivery            301
+/elementor-112               /faq                 301
+/elementor-112/              /faq                 301

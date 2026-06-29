@@ -61,10 +61,11 @@
   });
 })();
 
-/* -- SCROLL FADE-UP ---------------------------------------- */
+/* -- SCROLL REVEAL (fade-up + reveal) ---------------------- */
 (function() {
+  var sel = '.fade-up, .reveal';
   if (!window.IntersectionObserver) {
-    document.querySelectorAll('.fade-up').forEach(function(el) { el.classList.add('visible'); });
+    document.querySelectorAll(sel).forEach(function(el) { el.classList.add('visible'); });
     return;
   }
   var io = new IntersectionObserver(function(entries) {
@@ -72,7 +73,13 @@
       if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
     });
   }, { threshold: 0.10, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.fade-up').forEach(function(el) { io.observe(el); });
+  document.querySelectorAll(sel).forEach(function(el) { io.observe(el); });
+
+  // Stagger reveals within a shared parent for a sequenced feel
+  document.querySelectorAll('.ev-how__steps, .ev-menu__list, .ev-proof__grid').forEach(function(group) {
+    var kids = group.querySelectorAll('.reveal');
+    kids.forEach(function(el, i) { el.style.transitionDelay = (i * 80) + 'ms'; });
+  });
 })();
 
 /* -- FAQ ACCORDION ----------------------------------------- */
