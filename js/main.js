@@ -1,5 +1,5 @@
 /* ============================================================
-   THE LAZY OYSTER - v2 Main JS  |  ThatsKrispy
+   THE LAZY OYSTER - v3  |  ThatsKrispy
    ============================================================ */
 'use strict';
 
@@ -52,16 +52,7 @@
   });
 })();
 
-/* -- ACTIVE NAV LINK --------------------------------------- */
-(function() {
-  var path = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.navbar__links a, .navbar__mobile a').forEach(function(a) {
-    var href = a.getAttribute('href').split('/').pop() || 'index.html';
-    if (path === href) a.classList.add('active');
-  });
-})();
-
-/* -- SCROLL REVEAL (fade-up + reveal) ---------------------- */
+/* -- SCROLL REVEAL ----------------------------------------- */
 (function() {
   var sel = '.fade-up, .reveal';
   if (!window.IntersectionObserver) {
@@ -74,112 +65,97 @@
     });
   }, { threshold: 0.10, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll(sel).forEach(function(el) { io.observe(el); });
-
-  // Stagger reveals within a shared parent for a sequenced feel
-  document.querySelectorAll('.ev-how__steps, .ev-menu__list, .ev-proof__grid').forEach(function(group) {
-    var kids = group.querySelectorAll('.reveal');
-    kids.forEach(function(el, i) { el.style.transitionDelay = (i * 80) + 'ms'; });
+  /* stagger children */
+  document.querySelectorAll('.ev-how__steps, .ev-packages__grid, .ev-proof, .values-grid').forEach(function(group) {
+    group.querySelectorAll('.reveal').forEach(function(el, i) {
+      el.style.transitionDelay = (i * 80) + 'ms';
+    });
   });
 })();
 
 /* -- FAQ ACCORDION ----------------------------------------- */
 (function() {
-  document.querySelectorAll('.faq-btn').forEach(function(btn) {
+  document.querySelectorAll('.faq-q').forEach(function(btn) {
     btn.addEventListener('click', function() {
-      var answer = document.getElementById(btn.getAttribute('aria-controls'));
-      var open = btn.getAttribute('aria-expanded') === 'true';
-      document.querySelectorAll('.faq-btn').forEach(function(b) {
-        b.setAttribute('aria-expanded', 'false');
-        var a = document.getElementById(b.getAttribute('aria-controls'));
-        if (a) a.classList.remove('open');
+      var item = btn.closest('.faq-item');
+      if (!item) return;
+      var isOpen = item.classList.contains('open');
+      /* close all */
+      document.querySelectorAll('.faq-item').forEach(function(i) {
+        i.classList.remove('open');
+        i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
       });
-      if (!open && answer) {
+      /* open clicked if it was closed */
+      if (!isOpen) {
+        item.classList.add('open');
         btn.setAttribute('aria-expanded', 'true');
-        answer.classList.add('open');
       }
     });
   });
 })();
 
-/* -- CATERING FORM ----------------------------------------- */
+/* -- GENERIC FORM SUBMIT (catering + contact) -------------- */
 (function() {
-  var form = document.getElementById('catering-form');
-  if (!form) return;
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    var statusEl = document.getElementById('form-status');
-    var submitBtn = form.querySelector('.form-submit');
-    var originalText = submitBtn.textContent;
-    submitBtn.textContent = 'Sending...';
-    submitBtn.disabled = true;
-    statusEl.className = 'form-status';
-    var data = {};
-    new FormData(form).forEach(function(v, k) { data[k] = v; });
-    var body = [
-      'NEW CATERING INQUIRY - The Lazy Oyster', '---',
-      'Name: ' + (data.first_name || '') + ' ' + (data.last_name || ''),
-      'Email: ' + (data.email || ''), 'Phone: ' + (data.phone || ''),
-      'Event Address: ' + (data.event_address || ''),
-      'Event Date: ' + (data.event_date || ''),
-      'Event Time: ' + (data.event_time || ''),
-      'Guest Count: ' + (data.guest_count || ''),
-      'Celebration: ' + (data.celebration || ''),
-    ].join('\n');
-    fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify({
-        access_key: form.dataset.accessKey,
-        subject: 'New Catering Inquiry - ' + data.first_name + ' ' + data.last_name,
-        from_name: 'The Lazy Oyster Website',
-        message: body, email: data.email,
-        name: data.first_name + ' ' + data.last_name,
-        replyto: data.email,
+  ['catering-form', 'contact-form'].forEach(function(id) {
+    var form = document.getElementById(id);
+    if (!form) return;
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var statusEl = form.querySelector('.form-status');
+      var submitBtn = form.querySelector('[type="submit"]');
+      var originalText = submitBtn.textContent;
+      submitBtn.textContent = 'Sending...';
+      submitBtn.disabled = true;
+      if (statusEl) { statusEl.className = 'form-status'; statusEl.textContent = ''; }
+      var payload = { access_key: form.dataset.accessKey, from_name: 'The Lazy Oyster Website' };
+      new FormData(form).forEach(function(v, k) { payload[k] = v; });
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(payload)
       })
-    })
-    .then(function(r) { return r.json(); })
-    .then(function(res) {
-      submitBtn.textContent = originalText;
-      submitBtn.disabled = false;
-      if (res.success) {
-        statusEl.className = 'form-status success';
-        statusEl.textContent = 'Received! We\'ll be in touch within 24 hours to confirm your date.';
-        form.reset();
-      } else { throw new Error(res.message || 'Failed'); }
-    })
-    .catch(function() {
-      submitBtn.textContent = originalText;
-      submitBtn.disabled = false;
-      statusEl.className = 'form-status error';
-      statusEl.textContent = 'Something went wrong. Please email us at StayLazy@TheLazyOyster.com';
+      .then(function(r) { return r.json(); })
+      .then(function(res) {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+        if (statusEl) {
+          if (res.success) {
+            statusEl.className = 'form-status success';
+            statusEl.textContent = "Thanks! We'll get back to you within 24 hours.";
+            form.reset();
+          } else { throw new Error(res.message || 'Failed'); }
+        }
+      })
+      .catch(function() {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+        if (statusEl) {
+          statusEl.className = 'form-status error';
+          statusEl.textContent = 'Something went wrong. Please email StayLazy@TheLazyOyster.com or call (305) 905-0257.';
+        }
+      });
     });
   });
 })();
 
-/* -- NEWSLETTER FORM --------------------------------------- */
+/* -- NEWSLETTER FORMS -------------------------------------- */
 (function() {
   document.querySelectorAll('.newsletter-form').forEach(function(form) {
     form.addEventListener('submit', function(e) {
       e.preventDefault();
-      var btn = form.querySelector('button');
+      var btn = form.querySelector('button[type="submit"]') || form.querySelector('button');
       var orig = btn.textContent;
       btn.textContent = '...'; btn.disabled = true;
-      var data = {};
-      new FormData(form).forEach(function(v, k) { data[k] = v; });
+      var payload = { access_key: form.dataset.accessKey, from_name: 'The Lazy Oyster Website', subject: 'Newsletter Sign-Up - The Lazy Oyster' };
+      new FormData(form).forEach(function(v, k) { payload[k] = v; });
       fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify({
-          access_key: form.dataset.accessKey,
-          subject: 'Newsletter Sign-Up - The Lazy Oyster',
-          from_name: 'The Lazy Oyster Website',
-          message: 'New subscriber: ' + data.name + ' | ' + data.email,
-          email: data.email, name: data.name,
-        })
+        body: JSON.stringify(payload)
       })
       .then(function(r) { return r.json(); })
       .then(function(res) {
-        btn.textContent = res.success ? 'You\'re in!' : orig;
+        btn.textContent = res.success ? "You're in!" : orig;
         btn.disabled = false;
         if (res.success) form.reset();
       })
@@ -188,7 +164,7 @@
   });
 })();
 
-/* -- LOGO TICKER PAUSE ON HOVER ---------------------------- */
+/* -- TICKER PAUSE ON HOVER --------------------------------- */
 (function() {
   var track = document.querySelector('.ticker-track');
   if (!track) return;
