@@ -138,7 +138,7 @@
     btn.setAttribute('aria-label', 'Open accessibility menu');
     btn.setAttribute('aria-expanded', 'false');
     btn.innerHTML =
-      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+      '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:22px;height:22px;min-width:22px;max-width:22px;display:block;">' +
       '<circle cx="12" cy="4" r="2"/><path d="M19 13v-2a1 1 0 00-1-1H6a1 1 0 00-1 1v2"/>' +
       '<path d="M12 10v4"/><path d="M9 21l3-7 3 7"/></svg>';
 
