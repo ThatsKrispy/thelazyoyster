@@ -54,10 +54,11 @@
 
 /* -- ACTIVE NAV LINK --------------------------------------- */
 (function () {
-  var path = window.location.pathname.split('/').pop() || 'index.html';
-  if (path === '') path = 'index.html';
-  document.querySelectorAll('.navbar__links a').forEach(function (a) {
-    var href = (a.getAttribute('href') || '').split('/').pop() || 'index.html';
+  var raw = window.location.pathname;
+  // Normalise: '/about', '/about.html', 'about.html' all -> 'about'
+  var path = raw.split('/').pop().replace(/\.html$/, '') || 'index';
+  document.querySelectorAll('.navbar__links a, .navbar__mobile a').forEach(function (a) {
+    var href = (a.getAttribute('href') || '').replace(/\.html$/, '').split('/').pop() || 'index';
     if (path === href) a.classList.add('active');
   });
 })();

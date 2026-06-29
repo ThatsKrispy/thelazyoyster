@@ -6,6 +6,9 @@
   <meta name="description" content="Order fresh shucked oysters, bulk oysters, lobster rolls, and chargrilled oyster kits for delivery or pickup in Miami. Available Wednesday through Sunday.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.thelazyoyster.com/delivery">
+  <meta property="og:title" content="Oyster Delivery Miami | The Lazy Oyster">
+  <meta property="og:image" content="https://www.thelazyoyster.com/assets/images/ceviche-hero.webp">
+  <meta property="og:type" content="website">
   <link rel="icon" href="assets/logos/favicon.jpeg" type="image/jpeg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -60,6 +63,10 @@
          alt="Fresh ceviche with colorful vegetables and citrus from The Lazy Oyster"
          width="1600" height="600" loading="eager" fetchpriority="high">
     <div class="page-hero__overlay" aria-hidden="true"></div>
+    <div class="page-hero__caption container">
+      <span class="eyebrow" style="color:var(--yellow)">Oyster Delivery &amp; Pickup</span>
+      <h1>Fresh Oysters,<br>Your Way.</h1>
+    </div>
   </div>
 
   <!-- STEP 1 -->
@@ -82,7 +89,7 @@
     <div class="band__bg" style="background-image:url('assets/images/oyster-raw-bar-catering-setup.webp');" aria-hidden="true"></div>
     <div class="band__overlay" aria-hidden="true"></div>
     <div class="band__content">
-      <span class="eyebrow" style="color:var(--yellow)">Step 2</span>
+      <span class="delivery-step__num" style="color:var(--yellow);display:block;margin-bottom:8px;">Step 2</span>
       <h2 id="step2">Schedule Your Delivery or Pickup</h2>
       <p>Decide whether you&rsquo;d like your seafood delivered to your doorstep or if you&rsquo;d prefer to pick it up yourself. During checkout, choose the date and time that works best for you.</p>
     </div>
@@ -108,7 +115,7 @@
     <div class="band__bg" style="background-image:url('assets/images/catering-setup.webp');" aria-hidden="true"></div>
     <div class="band__overlay" aria-hidden="true"></div>
     <div class="band__content">
-      <span class="eyebrow" style="color:var(--yellow)">Step 4</span>
+      <span class="delivery-step__num">Step 4</span>
       <h2 id="step4">Savor the Experience</h2>
       <p>Whether it&rsquo;s a cozy night in or a special gathering, your oysters and lobster rolls arrive fresh, delicious, and ready to enjoy. From expertly shucked oysters to indulgent lobster rolls, we bring the taste of the sea to you!</p>
       <a href="https://www.orderthelazyoyster.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Schedule Your Delivery &rarr;</a>
@@ -121,7 +128,7 @@
       <span class="eyebrow" style="display:block;text-align:center;">Miami&rsquo;s Famous</span>
       <h2>Lobster Rolls</h2>
     </div>
-    <div style="max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,64px);align-items:center;">
+    <div class="intro-split">
       <div style="border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sh-lg);" class="fade-up">
         <img src="assets/images/lazy-oyster-lobster-roll-closeup.webp"
              alt="Miami lobster rolls from The Lazy Oyster"
@@ -152,6 +159,7 @@
       <p>Get first access to pop-up dates, new menu drops, and exclusive delivery deals.</p>
       <form class="newsletter-form" data-access-key="YOUR_WEB3FORMS_KEY" novalidate>
         <input type="hidden" name="botcheck" value="" style="display:none">
+        <input type="hidden" name="subject" value="Newsletter Sign-Up - The Lazy Oyster">
         <input type="text" name="name" placeholder="Name" required autocomplete="given-name">
         <input type="email" name="email" placeholder="Email" required autocomplete="email">
         <button type="submit" class="btn btn-primary">Sign Up</button>
