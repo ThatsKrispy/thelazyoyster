@@ -23,27 +23,29 @@ button { font-family: inherit; }
 
 /* -- TOKENS ------------------------------------------------ */
 :root {
-  --teal:        #4BACC6;   /* brand teal from logo couch */
-  --teal-dark:   #3893ac;
-  --teal-deep:   #2d7b92;
-  --teal-dim:    rgba(75,172,198,0.12);
-  --teal-soft:   #eaf6f9;
-  --yellow:      #F2B233;   /* eyebrow / accent yellow */
-  --yellow-dark: #d99a1f;
-  --gold:        #F2B233;   /* alias kept for legacy refs */
-  --gold-dark:   #d99a1f;
-  --ink:         #1f2d33;
-  --ink-soft:    #4a5860;
-  --navy:        #14333f;   /* dark band bg (teal-leaning) */
-  --navy-mid:    #1d4250;
-  --navy-light:  #2a5868;
+  --teal:        #339DBE;   /* exact brand teal from packaging/patterns */
+  --teal-bright: #3AA9C9;   /* brighter cyan for patterns */
+  --teal-dark:   #2b85a1;
+  --teal-deep:   #226c83;
+  --teal-dim:    rgba(51,157,190,0.12);
+  --teal-soft:   #e6f4f8;
+  --yellow:      #F7D451;   /* exact brand yellow from menu/patterns */
+  --yellow-bright: #FFD93B;
+  --yellow-dark: #e0b62f;
+  --gold:        #F7D451;   /* alias kept for legacy refs */
+  --gold-dark:   #e0b62f;
+  --ink:         #15232a;
+  --ink-soft:    #44545b;
+  --navy:        #0f2a33;   /* dark band bg, deep teal-black */
+  --navy-mid:    #173a45;
+  --navy-light:  #245563;
   --white:       #ffffff;
-  --cream:       #fbf9f4;
+  --cream:       #fbf7ec;   /* warm cream from tee */
   --gray-50:     #f5f7f8;
   --gray-200:    #e4eaec;
   --gray-400:    #9aa7ac;
   --gray-700:    #44545b;
-  --text:        #1f2d33;
+  --text:        #15232a;
   --r-sm:        6px;
   --r-md:        14px;
   --r-lg:        22px;
@@ -207,6 +209,12 @@ p  { color: var(--ink-soft); font-size: 1.05rem; }
   position: relative; height: clamp(520px, 75vh, 820px);
   overflow: hidden; display: flex; align-items: center;
 }
+.hero::after {
+  content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 46px; z-index: 2;
+  background-repeat: repeat-x; background-position: center bottom; background-size: 120px 46px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='46' viewBox='0 0 120 46'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='2.5' opacity='0.9'%3E%3Cpath d='M0 14 Q30 4 60 14 T120 14'/%3E%3Cpath d='M0 24 Q30 14 60 24 T120 24'/%3E%3Cpath d='M0 34 Q30 24 60 34 T120 34'/%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
 .hero__bg {
   position: absolute; inset: 0;
   background-image: url('../assets/images/lazy-oyster-raw-bar-oysters-miami.webp');
@@ -247,6 +255,12 @@ p  { color: var(--ink-soft); font-size: 1.05rem; }
 /* -- PAGE HERO --------------------------------------------- */
 .page-hero {
   position: relative; height: clamp(260px, 35vw, 400px); overflow: hidden;
+}
+.page-hero::after {
+  content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 40px; z-index: 2;
+  background-repeat: repeat-x; background-position: center bottom; background-size: 120px 40px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='40' viewBox='0 0 120 40'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='2.5' opacity='0.9'%3E%3Cpath d='M0 12 Q30 2 60 12 T120 12'/%3E%3Cpath d='M0 22 Q30 12 60 22 T120 22'/%3E%3Cpath d='M0 32 Q30 22 60 32 T120 32'/%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
 }
 .page-hero img {
   width: 100%; height: 100%; object-fit: cover; object-position: center 50%;
@@ -422,7 +436,13 @@ p  { color: var(--ink-soft); font-size: 1.05rem; }
 }
 
 /* -- FOOTER ------------------------------------------------ */
-.footer { background: var(--navy); color: rgba(255,255,255,0.65); padding: 72px var(--pad-x) 32px; }
+.footer { position: relative; background: var(--navy); color: rgba(255,255,255,0.65); padding: 72px var(--pad-x) 32px; }
+.footer::before {
+  content: ''; position: absolute; left: 0; right: 0; top: 0; height: 40px;
+  background-repeat: repeat-x; background-position: center top; background-size: 120px 40px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='40' viewBox='0 0 120 40'%3E%3Cg fill='none' stroke='%23F7D451' stroke-width='2.5' opacity='0.5'%3E%3Cpath d='M0 12 Q30 2 60 12 T120 12'/%3E%3Cpath d='M0 22 Q30 12 60 22 T120 22'/%3E%3Cpath d='M0 32 Q30 22 60 32 T120 32'/%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
 .footer__grid {
   max-width: var(--max-w); margin: 0 auto;
   display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr;
@@ -1027,4 +1047,45 @@ p  { color: var(--ink-soft); font-size: 1.05rem; }
   .ev-course { grid-template-columns: 1fr; gap: 16px; }
   .ev-course__no { font-size: 3rem; }
   .ev-proof__grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* ============================================================
+   BRAND PATTERNS (from TLO brand assets) - pure CSS, no images
+   ============================================================ */
+
+/* -- WAVE LINEWORK (continuous sine waves, like brand packaging) -- */
+.wave-divider {
+  height: 60px; width: 100%;
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: 120px 60px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='60' viewBox='0 0 120 60'%3E%3Cg fill='none' stroke='%23339DBE' stroke-width='3'%3E%3Cpath d='M0 12 Q30 0 60 12 T120 12'/%3E%3Cpath d='M0 24 Q30 12 60 24 T120 24'/%3E%3Cpath d='M0 36 Q30 24 60 36 T120 36'/%3E%3Cpath d='M0 48 Q30 36 60 48 T120 48'/%3E%3C/g%3E%3C/svg%3E");
+}
+.wave-divider--yellow {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='60' viewBox='0 0 120 60'%3E%3Cg fill='none' stroke='%23F7D451' stroke-width='3'%3E%3Cpath d='M0 12 Q30 0 60 12 T120 12'/%3E%3Cpath d='M0 24 Q30 12 60 24 T120 24'/%3E%3Cpath d='M0 36 Q30 24 60 36 T120 36'/%3E%3Cpath d='M0 48 Q30 36 60 48 T120 48'/%3E%3C/g%3E%3C/svg%3E");
+}
+.wave-divider--white {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='60' viewBox='0 0 120 60'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='3'%3E%3Cpath d='M0 12 Q30 0 60 12 T120 12'/%3E%3Cpath d='M0 24 Q30 12 60 24 T120 24'/%3E%3Cpath d='M0 36 Q30 24 60 36 T120 36'/%3E%3Cpath d='M0 48 Q30 36 60 48 T120 48'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* -- CHECKERBOARD (diner/picnic, yellow x teal) -- */
+.tlo-check {
+  --check-a: var(--yellow);
+  --check-b: var(--teal);
+  --check-size: 40px;
+  background-color: var(--check-a);
+  background-image:
+    linear-gradient(45deg, var(--check-b) 25%, transparent 25%, transparent 75%, var(--check-b) 75%),
+    linear-gradient(45deg, var(--check-b) 25%, transparent 25%, transparent 75%, var(--check-b) 75%);
+  background-size: var(--check-size) var(--check-size);
+  background-position: 0 0, calc(var(--check-size)/2) calc(var(--check-size)/2);
+}
+.tlo-check--teal-white { --check-a: var(--white); --check-b: var(--teal); }
+.tlo-check--subtle { --check-a: var(--gray-50); --check-b: var(--teal-soft); --check-size: 32px; }
+
+/* -- THIN WAVE BORDER (single row, as accent rule) -- */
+.wave-rule {
+  height: 16px; width: 100%; border: none;
+  background-repeat: repeat-x; background-position: center; background-size: 80px 16px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='16' viewBox='0 0 80 16'%3E%3Cpath d='M0 8 Q20 0 40 8 T80 8' fill='none' stroke='%23339DBE' stroke-width='3'/%3E%3C/svg%3E");
 }
