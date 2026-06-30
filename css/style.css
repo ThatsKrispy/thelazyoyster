@@ -1264,3 +1264,94 @@ h2.script { font-size: clamp(1.7rem, 3.5vw, 2.6rem); color: var(--teal); }
 
 .footer__copy a { font-size: inherit; opacity: 0.6; }
 .footer__copy a:hover { opacity: 1; color: var(--teal); }
+
+/* ============================================================
+   WEEKLY OYSTER BANNER  |  "Fresh this week" announcement bar
+   ============================================================ */
+.oyster-banner {
+  position: relative;
+  width: 100%;
+  background: #1d6e88;               /* darker brand teal — AA contrast w/ white */
+  color: #ffffff;
+  font-family: 'Fredoka', sans-serif;
+  border-bottom: 3px solid var(--yellow);
+}
+.oyster-banner__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 9px 52px 9px var(--pad-x);  /* extra right pad clears close btn */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 6px 14px;
+  text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+.oyster-banner__label {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+.oyster-banner__mark { margin-right: 6px; }
+.oyster-banner__list {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 4px 8px;
+}
+.oyster-banner__item { white-space: nowrap; }
+.oyster-banner__item strong { font-weight: 600; }
+.oyster-banner__reg {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--yellow);
+  vertical-align: 1px;
+}
+.oyster-banner__dot { color: var(--yellow); opacity: 0.85; }
+.oyster-banner__cta {
+  font-weight: 600;
+  color: #ffffff;
+  border-bottom: 2px solid var(--yellow);
+  padding-bottom: 1px;
+  white-space: nowrap;
+  transition: opacity var(--ease);
+}
+.oyster-banner__cta:hover,
+.oyster-banner__cta:focus-visible { opacity: 0.82; }
+.oyster-banner__close {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  border-radius: var(--r-pill);
+  color: #ffffff;
+  opacity: 0.85;
+  transition: background var(--ease), opacity var(--ease);
+}
+.oyster-banner__close svg { width: 17px; height: 17px; }
+.oyster-banner__close:hover { opacity: 1; background: rgba(255,255,255,0.16); }
+.oyster-banner__close:focus-visible {
+  outline: 2px solid var(--yellow);
+  outline-offset: 2px;
+  opacity: 1;
+}
+@media (max-width: 600px) {
+  .oyster-banner__inner {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 0.86rem;
+    gap: 4px 10px;
+  }
+  .oyster-banner__cta { width: 100%; }   /* CTA drops to its own line, easy tap */
+}
