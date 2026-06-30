@@ -24,8 +24,8 @@ window.WEEKLY_OYSTERS = {
     { name: "Sippican",       region: "MA" }
   ],
 
-  // CTA shown at the end of the bar.
-  cta: { text: "Order now", url: "https://www.orderthelazyoyster.com" }
+  // No CTA — the page already has an Order button just below the banner.
+  cta: null
 };
 
 /* ------------------------------------------------------------
